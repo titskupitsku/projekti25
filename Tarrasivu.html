@@ -4,14 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poketarra</title>
+
+    <link rel="stylesheet" href="Tarrasivu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <nav>
-        <a href="Homepage.html">Home/Etusivu</a>
-        <a href="Pokedex.html">Pokedex</a>
-        <a href="Poketarrat.html">Poketarrat</a>
-    </nav>
-    
+    <dialog id="signinDialog">
+                <div class="popup__header">
+                    <div class="title">My Account</div>
+                    <i class="fas fa-times close-btn" data-target="signinDialog"></i>
+                </div>
+                <div class="popup__description"> No account yet? <span class="link" id="link1">Register now!</span></div>
+                <form method="GET" action="/your-login-endpoint" class="form-content">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password1" name="password" placeholder="Enter your password" required />
+                        <label for="password">PASSWORD</label>
+                        <span class="toggle-password" data-target="password1" ></span>
+                    </div>
+                    <div class="buttons">
+                        <div class="button">
+                            <button type="submit">Log In</button>
+                        </div>
+                        <div class="button">
+                            <button type="button" onclick="document.getElementById('signinDialog').close()">Cancel</button>
+                        </div>      
+                    </div>
+                </form>
+    </dialog>
+    <dialog id="registerDialog">
+                <div class="popup__header">
+                    <div class="title">Create an account</div>
+                    <i class="fas fa-times close-btn" data-target="registerDialog"></i>
+                </div>
+                <div class="popup__description"> Already have an account? <span class="link" id="link2">Sign!</span></div>
+                <form method="GET" action="/your-login-endpoint" class="form-content">
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" placeholder="Enter username" required />
+                        <label for="username">USERNAME</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                        <label for="password">PASSWORD</label>
+                        <span class="toggle-password" data-target="password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" name="password" placeholder="Re-enter the password" required />
+                        <label for="password">RE-ENTER THE PASSWORD</label>
+                        <span class="toggle-password" data-target="confirmPassword" ></span>
+
+                    </div>
+                    <div id="passwordMatchMessage"></div>
+                    <div class="buttons">
+                        <div class="button">
+                            <button type="submit">Register</button>
+                        </div>
+                        <div class="button">
+                             <button type="button" onclick="document.getElementById('registerDialog').close()">Cancel</button>
+                        </div>  
+                    </div>
+                </form>
+    </dialog>
+    <div class="header">
+        <div class="main-nav">
+            <div class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></div>
+            <div class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></div>
+            <div class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></div>
+        </div>
+        <div class="sign-in"><button id="avaaDialog" onclick="openDialog()"><i class="fas fa-sign-in-alt"></i>Kirjaudu sisään</button></div>
+    </div>
+    <div class="content">
+    <div class="Teksti-Tarra"> <h3> Poketarra sivustolle! Täältä löydät pokemon tarroja!</h3></div>
+    <div class="flex-Tarrabox">
+        <div class="flex-items">1</div>
+        <div class="flex-items">2</div>
+        <div class="flex-items">3</div>
+    </div>
+</div>
 
 </body>
 </html>
