@@ -14,7 +14,6 @@ body{
     display: flex;
     justify-content:left;
     align-items: center;
-    gap: 20px;
 }
 
 
@@ -27,6 +26,8 @@ body{
     padding: 20px;
     cursor: pointer;
     transition: color 0.3s ease;
+    text-decoration: none;
+
 }
 
 .nav-item i {
@@ -37,33 +38,39 @@ body{
 }
 .nav-item:hover {
     color: #fff;
-    background-color: #857ef1;
+    background-color: #9e98ef;
     
 }
 .nav-item:hover i {
      color: #fff;
 }
-
+.nav-item.active {
+  background-color:#857ef1;
+  color: white;
+}
+.nav-item.active i {
+     color: #fff;
+}
 .sign-in{
   padding: 15px;
 }
 .sign-in button{
-    color: #000;
+    color: #fff;
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    background-color: #857ef1;
+    background-color: #4f45e2;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
 }
 .sign-in button i{
     margin-right: 5px;
 }
 .sign-in button:hover{
-    background: #4f45e2;
-    color: #fff;
+    background: #857ef1;
+    color: #000;
     transform: scale(1.1);
 }
 
