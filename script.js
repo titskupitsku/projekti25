@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
-
-
-
-
 function openDialog() {
     let form = document.querySelector("#signinDialog form"); 
     form.reset();
