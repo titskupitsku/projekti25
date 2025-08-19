@@ -12,7 +12,7 @@
     width: 60%;
     height: 400px;
     border: 1px solid #cc99f3;
-    margin-top: 100px; 
+    margin-top: 80px; 
     background-color: #cc99f3;
     border-radius: 10px;
     padding: 10px;
@@ -20,4 +20,16 @@
 }
 .Teksti-Tarra{
     text-align: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex-items {
+    flex: 1 ;
+    margin:10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
