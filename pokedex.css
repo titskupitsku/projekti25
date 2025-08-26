@@ -1,0 +1,69 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/green-grass-vector-seamless-texture-lawn-nature-meadow-plant-field-natural-outdoor-illustration_1284-47056.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: repeat;
+}
+.doto {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+p {
+    font-family: "Doto", sans-serif;
+}
+h2, h3 {
+    font-family: "Doto", sans-serif;
+}
+
+.pokelayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 50px;
+    grid-template-areas: 
+        "header header"
+        "name list"
+        "prev list"
+        "type list";
+    gap: 10px;
+    border: 3px solid #a72020;
+    background: #eaeaea;
+    padding: 15px;
+    width: 55%;
+    height: 400px;
+    margin: 70px auto;
+}
+.pokedex-header {
+    grid-area: header;
+    background: #a2b8a2;
+    text-align: center;
+    padding: 10px;
+}
+.poke-name {
+    grid-area: name;
+    background: lightcoral;
+    text-align: left;
+    padding: 10px;
+}
+.poke-preview {
+    grid-area: prev;
+    background-image: url("https://i.pinimg.com/736x/f0/51/45/f051457576f8e62a9d0a9906b09f3f34.jpg");
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    padding: 30px 10px;
+}
+.poke-type {
+    grid-area: type;
+    background: lightpink;
+    text-align: left;
+    padding: 10px;
+}
+.poke-list {
+    grid-area: list;
+    background: lightgray;
+    text-align: left;
+    padding: 10px;
+    overflow-y: scroll;
+}
