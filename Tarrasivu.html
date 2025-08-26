@@ -19,63 +19,67 @@
 <body>
     <dialog id="signinDialog">
                 <div class="popup__header">
-                    <div class="title">My Account</div>
+                    <div class="title">Minun tilini</div>
                     <i class="fas fa-times close-btn" data-target="signinDialog"></i>
                 </div>
-                <div class="popup__description"> No account yet? <span class="link" id="link1">Register now!</span></div>
+                <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
                 <form method="GET" action="/your-login-endpoint" class="form-content">
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <label for="email">Sähköpostiosoite</label>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="password1" name="password" placeholder="Enter your password" required />
-                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password1" name="password" placeholder="Salasana" required />
+                        <label for="password">Salasana</label>
                         <span class="toggle-password" data-target="password1" ></span>
                     </div>
                     <div class="buttons">
                         <div class="button">
-                            <button type="submit">Log In</button>
+                            <button type="submit">Kirjaudu Sisään</button>
                         </div>
                         <div class="button">
-                            <button type="button" onclick="document.getElementById('signinDialog').close()">Cancel</button>
+                            <button type="button" onclick="document.getElementById('signinDialog').close()">Peruuta</button>
                         </div>      
                     </div>
                 </form>
     </dialog>
     <dialog id="registerDialog">
                 <div class="popup__header">
-                    <div class="title">Create an account</div>
+                    <div class="title">Luo tili</div>
                     <i class="fas fa-times close-btn" data-target="registerDialog"></i>
                 </div>
-                <div class="popup__description"> Already have an account? <span class="link" id="link2">Sign!</span></div>
+                <div class="popup__description"> Onko sinulla jo tili? <span class="link" id="link2">Kirjaudu sisään!</span></div>
                 <form method="GET" action="/your-login-endpoint" class="form-content">
                     <div class="form-group">
-                        <input type="text" id="username" name="username" placeholder="Enter username" required />
-                        <label for="username">USERNAME</label>
+                        <input type="text" id="etunimi" name="username" placeholder="Syötä etunimesi" required />
+                        <label for="username">Etunimi</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                        <label for="email">EMAIL</label>
+                        <input type="text" id="sukunimi" name="username" placeholder="Syötä sukunimesi" required />
+                        <label for="username">Sukunimi</label>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required />
-                        <label for="password">PASSWORD</label>
+                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <label for="email">Sähköpostiosoite</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Salasana" required />
+                        <label for="password">Salasana</label>
                         <span class="toggle-password" data-target="password"></span>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="confirmPassword" name="password" placeholder="Re-enter the password" required />
-                        <label for="password">RE-ENTER THE PASSWORD</label>
+                        <input type="password" id="confirmPassword" name="password" placeholder="Syötä Salasana uudelleen" required />
+                        <label for="password">Syötä Salasana uudelleen</label>
                         <span class="toggle-password" data-target="confirmPassword" ></span>
 
                     </div>
                     <div id="passwordMatchMessage"></div>
                     <div class="buttons">
                         <div class="button">
-                            <button type="submit">Register</button>
+                            <button type="submit">Luo Tili</button>
                         </div>
                         <div class="button">
-                             <button type="button" onclick="document.getElementById('registerDialog').close()">Cancel</button>
+                             <button type="button" onclick="document.getElementById('registerDialog').close()">Peruuta</button>
                         </div>  
                     </div>
                 </form>
