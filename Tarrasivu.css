@@ -44,5 +44,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .Tarra-lisää { 
-    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
