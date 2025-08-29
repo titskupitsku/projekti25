@@ -27,7 +27,6 @@
     background-color: #fff;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    text-align: center; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
@@ -48,4 +47,12 @@
     display: flex;
     justify-content: center;
     margin: 20px 0;
+}
+.Tarra-kuva {
+    flex: auto 1;
+    max-width: 100%;
+    height: auto;
+    width: 100px;
+    border-radius: 10%;
+
 }
