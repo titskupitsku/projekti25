@@ -21,7 +21,7 @@ h2, h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 50px 1fr 50px;
-    grid-template-areas: 
+    grid-template-areas:
         "header header"
         "name list"
         "prev list"
@@ -44,7 +44,6 @@ h2, h3 {
     grid-area: name;
     background: lightcoral;
     text-align: left;
-    padding: 10px;
 }
 .poke-preview {
     grid-area: prev;
