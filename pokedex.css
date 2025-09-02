@@ -16,7 +16,10 @@ p {
 h2, h3 {
     font-family: "Doto", sans-serif;
 }
-
+#pokeborderimg {
+    border: 10px solid transparent;
+    border-image: url("pokeborderimg.png") 90/ 30px 30px round;
+}
 .pokelayout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -27,8 +30,7 @@ h2, h3 {
         "poke-preview poke-right"
         "poke-bottom poke-right";
     gap: 10px;
-    border: 3px solid #a72020;
-    background: #eaeaea;
+    background: transparent;
     width: 57%;
     height: 420px;
     margin: 70px auto;
@@ -80,9 +82,11 @@ h2, h3 {
     justify-content: space-between;
     left: 26%;
     top: 250px;
+    visibility: hidden;
 }
 #pokelist-text:hover + #pokelistimg {
     display: block;
+    visibility: visible;
 }
 /* pokepages */
 .pokelayout_page {
