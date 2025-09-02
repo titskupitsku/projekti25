@@ -72,6 +72,17 @@ h2, h3 {
     overflow-y: scroll;
     margin-right: 10px;
     font-weight: bold;
+    font-family: "Doto", sans-serif;
+}
+#pokelistimg {
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    left: 26%;
+    top: 250px;
+}
+#pokelist-text:hover + #pokelistimg {
+    display: block;
 }
 /* pokepages */
 .pokelayout_page {

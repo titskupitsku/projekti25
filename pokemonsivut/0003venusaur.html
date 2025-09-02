@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pokedex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <script src="../script.js" defer></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <dialog id="signinDialog">
+                <div class="popup__header">
+                    <div class="title">Minun tilini</div>
+                    <i class="fas fa-times close-btn" data-target="signinDialog"></i>
+                </div>
+                <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
+                <form method="GET" action="/your-login-endpoint" class="form-content">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <label for="email">Sähköpostiosoite</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password1" name="password" placeholder="Salasana" required />
+                        <label for="password">Salasana</label>
+                        <span class="toggle-password" data-target="password1" ></span>
+                    </div>
+                    <div class="buttons">
+                        <div class="button">
+                            <button type="submit">Kirjaudu Sisään</button>
+                        </div>
+                        <div class="button">
+                            <button type="button" onclick="document.getElementById('signinDialog').close()">Peruuta</button>
+                        </div>      
+                    </div>
+                </form>
+    </dialog>
+    <dialog id="registerDialog">
+                <div class="popup__header">
+                    <div class="title">Luo tili</div>
+                    <i class="fas fa-times close-btn" data-target="registerDialog"></i>
+                </div>
+                <div class="popup__description"> Onko sinulla jo tili? <span class="link" id="link2">Kirjaudu sisään!</span></div>
+                <form method="GET" action="/your-login-endpoint" class="form-content">
+                    <div class="form-group">
+                        <input type="text" id="etunimi" name="username" placeholder="Syötä etunimesi" required />
+                        <label for="username">Etunimi</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="sukunimi" name="username" placeholder="Syötä sukunimesi" required />
+                        <label for="username">Sukunimi</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <label for="email">Sähköpostiosoite</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Salasana" required />
+                        <label for="password">Salasana</label>
+                        <span class="toggle-password" data-target="password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" name="password" placeholder="Syötä Salasana uudelleen" required />
+                        <label for="password">Syötä Salasana uudelleen</label>
+                        <span class="toggle-password" data-target="confirmPassword" ></span>
+
+                    </div>
+                    <div id="passwordMatchMessage"></div>
+                    <div class="buttons">
+                        <div class="button">
+                            <button type="submit">Luo Tili</button>
+                        </div>
+                        <div class="button">
+                             <button type="button" onclick="document.getElementById('registerDialog').close()">Peruuta</button>
+                        </div>  
+                    </div>
+                </form>
+    </dialog>
+    <div class="header">
+        <div class="main-nav">
+            <a href="Homepage.html" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
+            <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
+            <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
+        </div>
+        <div class="sign-in"><button id="avaaDialog" onclick="openDialog()"><i class="fas fa-sign-in-alt"></i>Kirjaudu sisään</button></div>
+    </div>
+    <div class="pokelayout_page">
+        <div class="pokedex-header">
+            <p>Venusaur</p>
+        </div>
+        <div class="mainpoke-preview">
+            
+        </div>
+        <div class="poke-lore">
+            <p>lore</p>
+        </div>
+        <div class="poke-stats">
+            <p>stats</p>
+        </div>
+    </div>
+    
+</body>
+</html>
