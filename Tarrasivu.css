@@ -42,11 +42,15 @@
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.Tarra-lisää { 
+.Tarrabutton {  
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    border: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    
 }
 .Tarra-kuva {
     flex: auto 1;
@@ -54,6 +58,7 @@
     height: auto;
     width: 100px;
     border-radius: 10%;
+
 
 }
 .flex-tarrabox-lisää {
