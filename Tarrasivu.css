@@ -56,7 +56,7 @@
     border-radius: 10%;
 
 }
-.flex-Tarrabox-lisää {
+.flex-tarrabox-lisää {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
