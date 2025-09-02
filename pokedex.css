@@ -17,7 +17,7 @@ h2, h3 {
     font-family: "Doto", sans-serif;
 }
 #pokeborderimg {
-    border: 10px solid transparent;
+    border: 8px solid transparent;
     border-image: url("pokeborderimg.png") 90/ 30px 30px round;
 }
 .pokelayout {
