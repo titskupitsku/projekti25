@@ -9,7 +9,7 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 36px;
     width: 60%;
-    height: 400px;
+    height: 260px;
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
     background-color: #b9d3e9;
@@ -71,6 +71,7 @@
     height: auto;
     width: 100px;
     border-radius: 10%;
+   
 
 
 }
