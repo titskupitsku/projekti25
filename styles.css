@@ -417,10 +417,9 @@ dialog input:focus::placeholder {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  padding: 0 20px;
-  padding-left: 50px;
   color: #fff;
-  background: linear-gradient(90deg, #3f4458, transparent);
+  padding: 0px 10px;
+  background: linear-gradient(90deg, #6589ff, transparent);
   cursor: pointer;
 }
 /* even event */
@@ -428,7 +427,7 @@ dialog input:focus::placeholder {
   background: transparent;
 }
 .events .event:hover {
-  background: linear-gradient(90deg, var(--primary-clr), transparent);
+  background: linear-gradient(90deg, #001dc2, transparent);
 }
 .events .event .title {
   display: flex;
@@ -441,7 +440,7 @@ dialog input:focus::placeholder {
   margin-left: 20px;
 }
 .events .event i {
-  color: var(--primary-clr);
+  color: #001dc2;
   font-size: 0.5rem;
 }
 .events .event:hover i {
@@ -450,26 +449,25 @@ dialog input:focus::placeholder {
 .events .event .event-time {
   font-size: 0.8rem;
   font-weight: 400;
-  color: #878895;
+  color: #222224;
   margin-left: 15px;
   pointer-events: none;
 }
 .events .event:hover .event-time {
   color: #fff;
 }
-/* add tick in event after */
 .events .event::after {
-  content: "✓";
+  content: "\2715";
   position: absolute;
   top: 50%;
   right: 0;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1;
   display: none;
   align-items: center;
   justify-content: center;
-  opacity: 0.3;
-  color: var(--primary-clr);
+  opacity: 0.7;
+  color: #fff;
   transform: translateY(-50%);
 }
 .events .event:hover::after {
@@ -483,15 +481,18 @@ dialog input:focus::placeholder {
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #878895;
+  color: #1d1d1e;
 }
 .add-event-wrapper {
   position: absolute;
   bottom: 100px;
   left: 50%;
   width: 90%;
-  max-height: 0;
+  max-height: 300px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border-radius: 5px;
   background-color: #fff;
   transform: translateX(-50%);
@@ -506,13 +507,13 @@ dialog input:focus::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
   color: #373c4f;
   border-bottom: 1px solid #f5f5f5;
 }
 .add-event-header .close {
   font-size: 1.5rem;
   cursor: pointer;
+  padding-right: 20px;
 }
 .add-event-header .close:hover {
   color: var(--primary-clr);
@@ -520,6 +521,7 @@ dialog input:focus::placeholder {
 .add-event-header .title {
   font-size: 1.2rem;
   font-weight: 500;
+  padding-left: 20px;
 }
 .add-event-body {
   width: 100%;
@@ -527,15 +529,17 @@ dialog input:focus::placeholder {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 20px;
+  
+  
 }
-.add-event-body .add-event-input {
-  width: 100%;
+.add-event-input{
+  width: 70%;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  padding-left: 30px;
+  
   
 }
 .add-event-body .add-event-input input {
@@ -544,7 +548,6 @@ dialog input:focus::placeholder {
   outline: none;
   border: none;
   border-bottom: 1px solid #f5f5f5;
-  padding: 0 10px;
   font-size: 1rem;
   font-weight: 400;
   color: #373c4f;
@@ -582,8 +585,8 @@ dialog input:focus::placeholder {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: #878895;
-  border: 2px solid #878895;
+  color: #f6f7ff;
+  border: 2px solid #f3f4fe;
   opacity: 0.5;
   border-radius: 50%;
   background-color: transparent;
