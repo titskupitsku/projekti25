@@ -3,9 +3,9 @@ const Näytä = document.getElementById("Avaa");
 
 Button.addEventListener("click", event => {
    
-    //Display
+    //Display thingy
     if(Näytä.style.display === "none"){
-        Näytä.style.display = "block";
+        Näytä.style.display = "grid";
         Button.textContent = "Hide";
     }
     else{
@@ -13,7 +13,7 @@ Button.addEventListener("click", event => {
         Button.textContent = "Show";
     }
    
-   //Visibility
+   //Visibility asiat
     if(Näytä.style.visibility === "hidden"){
         Näytä.style.visibility = "visible";
         Button.textContent = "Hide";
@@ -23,4 +23,5 @@ Button.addEventListener("click", event => {
         Button.textContent = "Show";
     }
 });
+
 
