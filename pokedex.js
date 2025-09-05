@@ -3,4 +3,3 @@ const pokemon = {
     number: "0001",
     type: ["Grass", "Poison"],
 };
-
