@@ -138,9 +138,18 @@ function initCalendar() {
   }
   //current month days
   for(let i = 1; i <= lastDate; i++){
-    days += `<div class="day">${i}</div>`;
+    if(
+        i === new Date().getDate() &&
+        year === new Date().getFullYear() &&
+        month === new Date().getMonth()
+    ){ 
+      days += `<div class="day today">${i}</div>`;
+    }
+    else{
+      days += `<div class="day">${i}</div>`;
+    }
   }
-  //add nex month days
+  //add next month days
   for(let j = 1; j <= nextDays; j++){
     days += `<div class="day next-date">${j}</div>`;
   }
