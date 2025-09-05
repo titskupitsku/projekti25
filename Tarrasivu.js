@@ -1,7 +1,7 @@
 
 // sivulta Medium
-function AvaaLisää(elementId, visible = true) {
-    const element = document.getElementById(elementId);
+function AvaaLisää(visible = true) {
+    const element = document.getElementById("Avaa")
     element.style.visibility = visible ? 'visible' : 'hidden';
 }
 
