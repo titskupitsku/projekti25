@@ -42,15 +42,13 @@
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.Tarrabutton {  
-    align-items: center;
+.Tarrabutton {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 20px 0;
-    border: 0; 
+    margin: 20px auto;
+    border: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    
 }
 .Tarra-kuva {
     flex: auto 1;
@@ -67,12 +65,12 @@
     grid-template-rows: repeat(7, 1fr);
     gap: 36px;
     width: 60%;
-    height: 440px;
+    height: auto;
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
     background-color: #b9d3e9;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 16px;
-    visibility:hidden;
+    
 }
