@@ -1,6 +1,8 @@
-const pokemon = {
+const pokemon = [{
     name: "Bulbasaur",
-    number: "0001",
-    type: ["Grass", "Poison"],
-};
+    id: "0001",
+    picture: 
+    type: ["Grass", "Poison"]},
+
+];
 
