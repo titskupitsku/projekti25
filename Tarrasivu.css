@@ -9,7 +9,7 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 36px;
     width: 60%;
-    height: 400px;
+    height: 260px;
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
     background-color: #b9d3e9;
@@ -44,11 +44,26 @@
 }
 .Tarrabutton {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 20px auto;
-    border: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.Tarrabutton button {
+    background: linear-gradient(90deg, #4f8ef7 0%, #b9d3e9 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight:550;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(79, 142, 247, 0.15);
+}
+.Tarrabutton button:hover {
+    background: linear-gradient(90deg, #b9d3e9);
+    transform: translate(-2px) scale(1.05);
+    box-shadow: 6px 20px rgba(30, 200, 220, 0.20);
 }
 .Tarra-kuva {
     flex: auto 1;
@@ -56,6 +71,7 @@
     height: auto;
     width: 100px;
     border-radius: 10%;
+   
 
 
 }
