@@ -75,6 +75,15 @@ h2, h3 {
     margin-right: 10px;
     font-weight: bold;
     font-family: "Doto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.poke-show{
+    padding:5px 2px;
+    border-radius: 20px;
+    border: 2px solid #a72020;
+    margin-bottom: 10px;
 }
 /* pokepages */
 .pokelayout_page {
