@@ -16,53 +16,117 @@ p {
 h2, h3 {
     font-family: "Doto", sans-serif;
 }
-
+#pokeborderimg {
+    border: 8px solid transparent;
+    border-image: url("pokeborderimg.png") 90/ 30px 30px round;
+}
 .pokelayout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 50px 1fr 50px;
     grid-template-areas:
-        "header header"
-        "name list"
-        "prev list"
-        "type list";
+        "pokedex-header pokedex-header"
+        "poke-name poke-right"
+        "poke-preview poke-right"
+        "poke-bottom poke-right";
     gap: 10px;
-    border: 3px solid #a72020;
-    background: #eaeaea;
-    padding: 15px;
-    width: 55%;
-    height: 400px;
+    background: transparent;
+    width: 57%;
+    height: 420px;
     margin: 70px auto;
+    padding-bottom: 10px;
 }
-.pokedex-header {
-    grid-area: header;
-    background: #a2b8a2;
+.pokelayout > div.pokedex-header {
+    grid-area: pokedex-header;
     text-align: center;
-    padding: 10px;
+    background: #a2b8a2;
+    font-weight: bold;
 }
-.poke-name {
-    grid-area: name;
+.pokelayout > div.poke-name {
+    grid-area: poke-name;
+    align-items: center;
+    text-align: center;
     background: lightcoral;
-    text-align: left;
+    margin-left: 10px;
+    font-weight: bold;
 }
-.poke-preview {
-    grid-area: prev;
+.pokelayout > div.poke-preview {
+    grid-area: poke-preview;
     background-image: url("https://i.pinimg.com/736x/f0/51/45/f051457576f8e62a9d0a9906b09f3f34.jpg");
     background-position: center;
     background-size: cover;
     align-items: center;
-    padding: 30px 10px;
+    margin-left: 10px;
 }
-.poke-type {
-    grid-area: type;
+.pokelayout > div.poke-type {
+    grid-area: poke-bottom;
+    align-items: center;
+    text-align: center;
     background: lightpink;
-    text-align: left;
-    padding: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
 }
-.poke-list {
-    grid-area: list;
+.pokelayout > div.poke-list {
+    grid-area: poke-right;
+    align-items: left;
     background: lightgray;
     text-align: left;
-    padding: 10px;
     overflow-y: scroll;
+    margin-right: 10px;
+    font-weight: bold;
+    font-family: "Doto", sans-serif;
+}
+#pokelistimg {
+    display: none;
+    position: absolute;
+    justify-content: space-between;
+    left: 26%;
+    top: 250px;
+    visibility: hidden;
+}
+#pokelist-text:hover + #pokelistimg {
+    display: block;
+    visibility: visible;
+}
+/* pokepages */
+.pokelayout_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 100px;
+    grid-template-areas:
+        "pokedex-header pokedex-header"
+        "poke-preview poke-right"
+        "poke-preview poke-right"
+        "poke-bottom poke-bottom";
+    gap: 10px;
+    border: 3px solid #a72020;
+    background: #eaeaea;
+    width: 57%;
+    height: 420px;
+    margin: 70px auto;
+    padding-bottom: 10px;
+}
+.pokelayout_page > div.pokedex-header {
+    grid-area: pokedex-header;
+    text-align: center;
+    background: #a2b8a2;
+    font-weight: bold;
+}
+.pokelayout_page > div.mainpoke-preview {
+    grid-area: poke-preview;
+    background-color: #a2b8a2;
+}
+.pokelayout_page > div.poke-lore {
+    grid-area: poke-bottom;
+    background-color: #d0e6d0;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.pokelayout_page > div.poke-stats {
+    grid-area: poke-right;
+    background-color: #d0e6d0;
+    align-items: left;
+    text-align: left;
 }
