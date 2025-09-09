@@ -57,7 +57,13 @@ h2, h3 {
     background-size: cover;
     align-items: center;
     margin-left: 10px;
+    height: 300px;
 }
+.pokelayout > div.poke-preview img{
+    width: 80%;
+}
+
+
 .pokelayout > div.poke-type {
     grid-area: poke-bottom;
     align-items: center;
@@ -81,11 +87,19 @@ h2, h3 {
 }
 .poke-show{
     padding:5px 2px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 2px solid #a72020;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+   
 }
-
+.poke-show.active{
+    padding:6px 4px;
+    border-radius: 10px;
+    border: 3px solid #a72020;
+    margin-bottom: 4px;
+    font-size: 20px;
+    color: #a72020;
+}
 /* pokepages */
 .pokelayout_page {
     display: grid;
