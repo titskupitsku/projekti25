@@ -52,12 +52,9 @@ h2, h3 {
 }
 .pokelayout > div.poke-preview {
     grid-area: poke-preview;
-    background-image: url("https://i.pinimg.com/736x/f0/51/45/f051457576f8e62a9d0a9906b09f3f34.jpg");
-    background-position: center;
-    background-size: cover;
     align-items: center;
     margin-left: 10px;
-    height: 300px;
+    
 }
 .pokelayout > div.poke-preview img{
     width: 80%;
@@ -89,6 +86,9 @@ h2, h3 {
 .poke-show{
     padding:5px 2px;
     border-radius: 10px;
+    border: 2px solid #a72020;
+    margin-bottom: 4px;
+    
 }
 .poke-show.active{
     padding:6px 4px;
