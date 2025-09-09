@@ -13,7 +13,7 @@
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
     background-color: #b9d3e9;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 10px;
 }
 .Teksti-Tarra{
@@ -71,22 +71,42 @@
     height: auto;
     width: 100px;
     border-radius: 10%;
+    max-width: 100%;
    
 
 
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
 }
 .flex-tarrabox-lisää {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 36px;
-    width: 60%;
+    width: 65%;
     height: auto;
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
     background-color: #b9d3e9;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 10px;
     margin-bottom: 16px;
     
 }
+
