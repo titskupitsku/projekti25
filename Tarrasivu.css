@@ -36,9 +36,9 @@
     border: none;
     outline: none;
     width: 2;
-    border: 2px solid #8a8181;
+    border: 2px solid #958b8b;
     border-radius: 8px;
-    background-color: rgb(111, 103, 103);
+    background-color: rgb(164, 155, 155);
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -59,6 +59,7 @@
     font-weight:550;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(79, 142, 247, 0.15);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .Tarrabutton button:hover {
     background: linear-gradient(90deg, #b9d3e9);
@@ -83,7 +84,6 @@ input[type=text] {
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
-  background-image: url('searchicon.png');
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
