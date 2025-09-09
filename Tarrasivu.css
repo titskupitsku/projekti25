@@ -21,8 +21,12 @@
 .Teksti-Tarra{
     text-align: center;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     color: #e1e8e9;
-    
+     color: #000000;
+     border:#b9d3e9;
+    border-radius: 6px ;
+    border-style:solid;
+    background-color:#b9d3e9;
+    padding: 1px;
     
 }
 .flex-tarra-items {
