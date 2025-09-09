@@ -20,7 +20,7 @@
                     <i class="fas fa-times close-btn" data-target="signinDialog"></i>
                 </div>
                 <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
-                <form method="GET" action="/your-login-endpoint" class="form-content">
+                <form method="post" action="register.php" class="form-content">
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
                         <label for="email">Sähköpostiosoite</label>
@@ -46,13 +46,13 @@
                     <i class="fas fa-times close-btn" data-target="registerDialog"></i>
                 </div>
                 <div class="popup__description"> Onko sinulla jo tili? <span class="link" id="link2">Kirjaudu sisään!</span></div>
-                <form method="GET" action="/your-login-endpoint" class="form-content">
+                <form method="post" action="register.php" class="form-content">
                     <div class="form-group">
-                        <input type="text" id="etunimi" name="username" placeholder="Syötä etunimesi" required />
+                        <input type="text" id="firstname" name="username" placeholder="Syötä etunimesi" required />
                         <label for="username">Etunimi</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="sukunimi" name="username" placeholder="Syötä sukunimesi" required />
+                        <input type="text" id="lastname" name="username" placeholder="Syötä sukunimesi" required />
                         <label for="username">Sukunimi</label>
                     </div>
                     <div class="form-group">
@@ -117,40 +117,8 @@
                 <div class="event-date">21 July 2022</div>
             </div>
             <div class="events">
-  <!-- Sample Event 1 -->
-  <div class="event">
-    <div class="title">
-      <i class="fas fa-circle"></i>
-      <span class="event-title">Team Meeting</span>
-    </div>
-    <div class="event-time">10:00 AM – 11:00 AM</div>
-  </div>
-
-  <!-- Sample Event 2 -->
-  <div class="event">
-    <div class="title">
-      <i class="fas fa-circle"></i>
-      <span class="event-title">Project Review</span>
-    </div>
-    <div class="event-time">1:30 PM – 2:30 PM</div>
-  </div>
-
-  <!-- Sample Event 3 -->
-  <div class="event">
-    <div class="title">
-      <i class="fas fa-circle"></i>
-      <span class="event-title">Client Call</span>
-    </div>
-    <div class="event-time">4:00 PM – 4:45 PM</div>
-  </div>
-
-  <!-- No Event Message (optional) -->
-  <!-- Uncomment this if there are no events -->
-  <!--
-  <div class="no-event">No events scheduled</div>
-  -->
-</div>
-
+                <!--I will add events by js-->
+            </div>
 
             <div class="add-event-wrapper">
                 <div class="add-event-header">
