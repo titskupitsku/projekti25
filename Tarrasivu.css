@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .flex-Tarrabox {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -16,9 +17,13 @@
     border-radius: 6px;
     padding: 10px;
 }
+
 .Teksti-Tarra{
     text-align: center;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #e1e8e9;
+    
+    
 }
 .flex-tarra-items {
     flex: 1 ;
@@ -126,6 +131,15 @@ input[type=text]:focus {
     transform: scale(1.3);
     transition: transform 0.4s; 
     
+}
+.Tarrabackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: #b9d3e9;
 }
 
 @keyframes gengar-move {
