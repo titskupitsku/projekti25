@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const pokemonData = {
     "0001": {
       name: "Bulbasaur",
@@ -43,3 +44,12 @@ const pokeItems = document.querySelectorAll('.poke-show');
 
 
 
+=======
+const pokemon = [{
+    name: "Bulbasaur",
+    id: "0001",
+    picture:
+    type: ["Grass", "Poison"]},
+    
+];
+>>>>>>> 6437657ffd67ce38715082f924b4ce92674acfec
