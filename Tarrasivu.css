@@ -118,12 +118,15 @@ input[type=text]:focus {
     margin-right: 260px;
     max-width: 70px;
     display: flex;
-    animation: gengar-move 6s, linear infinite alternate;
+    animation: gengar-move 2.5s, linear infinite alternate;
 
 }
-.Animation-t hover{
+.Animation-t:hover{
+    transform: scale(1.3);
+    transition: transform 0.4s; 
     
 }
+
 @keyframes gengar-move {
     0% {
         top: 10px;
@@ -131,12 +134,12 @@ input[type=text]:focus {
         transform: translate(0, 0);
     }
     25% {
-        top: 30px;
+        top: 50px;
         right: 10px;
         transform: translate(0, 0);
     }
     50% {
-        top: 90px;
+        top: 85px;
         right: 10px;
         transform: translate(0, 0);
     }
@@ -146,7 +149,7 @@ input[type=text]:focus {
         transform: translate(0, 0);
     }
     100% {
-        top: 10px;
+        top: 112px;
         right: 10px;
         transform: translate(0, 0);
     }
