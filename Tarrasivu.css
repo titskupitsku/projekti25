@@ -80,7 +80,7 @@
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 36px;
-    width: 60%;
+    width: 65%;
     height: auto;
     border: 1px solid #b9d3e9;
     margin: 16px auto 0 auto;
