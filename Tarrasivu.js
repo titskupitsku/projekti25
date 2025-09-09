@@ -25,3 +25,16 @@ Button.addEventListener("click", event => {
 });
 
 
+document.getElementById('hakutarra').addEventListener('input', function(e) {
+    const search = e.target.value.toLowerCase();
+   
+document.querySelectorAll('.Tarra-kuva').forEach(img => {
+
+      if (img.alt.toLowerCase().includes(search)) {
+        img.style.display = '';
+    } else {
+        img.style.display = 'none'; }
+});
+});
+
+
