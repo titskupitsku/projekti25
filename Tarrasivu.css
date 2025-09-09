@@ -110,3 +110,44 @@ input[type=text]:focus {
     
 }
 
+.Animation-t {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 100px;
+    margin-right: 260px;
+    max-width: 70px;
+    display: flex;
+    animation: gengar-move 6s, linear infinite alternate;
+
+}
+.Animation-t hover{
+    
+}
+@keyframes gengar-move {
+    0% {
+        top: 10px;
+        right: 10px;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 30px;
+        right: 10px;
+        transform: translate(0, 0);
+    }
+    50% {
+        top: 90px;
+        right: 10px;
+        transform: translate(0, 0);
+    }
+    75% {
+        top: 112px;
+        right: 10px;
+        transform: translate(0, 0);
+    }
+    100% {
+        top: 10px;
+        right: 10px;
+        transform: translate(0, 0);
+    }
+}
