@@ -24,7 +24,7 @@ Button.addEventListener("click", event => {
     }
 });
 
-
+//Haku jutut
 document.getElementById('hakutarra').addEventListener('input', function(e) {
     const search = e.target.value.toLowerCase();
    
