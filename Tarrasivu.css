@@ -20,14 +20,20 @@
 
 .Teksti-Tarra{
     text-align: center;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     color: #000000;
-     border:#b9d3e9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    border:#b9d3e9;
     border-radius: 6px ;
     border-style:solid;
     background-color:#b9d3e9;
     padding: 1px;
-    
+    cursor: pointer;
+    transition: background 0.8s, transform 1s, box-shadow 0.25s;
+}
+.Teksti-Tarra:hover{
+    background: linear-gradient(90deg, #b9d3e9);
+    transform: translate(-2px) scale(1.1);
+    box-shadow: 6px 20px rgba(2, 59, 36, 0.2);
 }
 .flex-tarra-items {
     flex: 1 ;
@@ -67,13 +73,13 @@
     font-size: 1rem;
     font-weight:550;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(79, 142, 247, 0.15);
+    box-shadow: 0 4px 14px rgba(6, 78, 63, 0.15);
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .Tarrabutton button:hover {
     background: linear-gradient(90deg, #b9d3e9);
     transform: translate(-2px) scale(1.05);
-    box-shadow: 6px 20px rgba(30, 200, 220, 0.20);
+    box-shadow: 6px 20px rgba(1, 53, 19, 0.2);
 }
 .Tarra-kuva {
     flex: auto 1;
