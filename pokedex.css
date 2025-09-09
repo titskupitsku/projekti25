@@ -1,6 +1,7 @@
 body {
-    background-image: url("https://img.freepik.com/free-vector/green-grass-vector-seamless-texture-lawn-nature-meadow-plant-field-natural-outdoor-illustration_1284-47056.jpg?semt=ais_hybrid&w=740&q=80");
-    background-size: repeat;
+    background-image: url("pokedex-kuvat/pixelbackground.jpg");
+    background-size: cover;
+    image-rendering: pixelated;
 }
 .doto {
   font-family: "Doto", sans-serif;
@@ -18,7 +19,8 @@ h2, h3 {
 }
 #pokeborderimg {
     border: 8px solid transparent;
-    border-image: url("pokeborderimg.png") 90/ 30px 30px round;
+    border-image: url("pokedex-kuvat/pokeborderimg.png") 90/ 30px 30px round;
+    image-rendering: pixelated;
 }
 .pokelayout {
     display: grid;
@@ -29,7 +31,7 @@ h2, h3 {
         "poke-name poke-right"
         "poke-preview poke-right"
         "poke-bottom poke-right";
-    gap: 10px;
+    gap: 8px;
     background: transparent;
     width: 57%;
     height: 420px;
@@ -41,6 +43,8 @@ h2, h3 {
     text-align: center;
     background: #a2b8a2;
     font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .pokelayout > div.poke-name {
     grid-area: poke-name;
@@ -52,17 +56,16 @@ h2, h3 {
 }
 .pokelayout > div.poke-preview {
     grid-area: poke-preview;
-    background-image: url("https://i.pinimg.com/736x/f0/51/45/f051457576f8e62a9d0a9906b09f3f34.jpg");
-    background-position: center;
-    background-size: cover;
     align-items: center;
     margin-left: 10px;
-    height: 300px;
+    height: 200px;
 }
-.pokelayout > div.poke-preview img{
-    width: 80%;
+.pokelayout > div.poke-preview img {
+    width: 60%;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
 }
-
 
 .pokelayout > div.poke-type {
     grid-area: poke-bottom;
@@ -86,12 +89,12 @@ h2, h3 {
     padding: 10px;
 }
 
-.poke-show{
-    padding:5px 2px;
+.poke-show {
+    padding: 5px 2px;
     border-radius: 10px;
 }
 .poke-show.active{
-    padding:6px 4px;
+    padding: 6px 4px;
     border-radius: 10px;
     border: 3px solid #a72020;
     margin-bottom: 4px;
