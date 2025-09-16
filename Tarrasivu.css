@@ -169,7 +169,21 @@ input[type=text]:focus {
 
 
 }
-
+.tarra-tab {
+    overflow:hidden;
+    border: 1px solid #5d97ca;
+    background-color:#4f8ef7;
+}
+.tarra-tab button {
+background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
 .Tarrabackground {
     position: fixed;
     top: 0;
