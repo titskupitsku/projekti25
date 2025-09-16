@@ -37,6 +37,22 @@
     box-shadow: 6px 20px rgba(2, 59, 36, 0.2);
 }
 
+.Lisäteksti-tarra {
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    border: 1px solid #5d97ca;
+    border-radius: 6px;
+    background-color: #a1c9ec;
+    padding: 1px 8px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .flex-tarra-items {
     flex: 1;
     margin: 10px;
@@ -166,7 +182,7 @@ input[type=text]:focus {
 
 @keyframes gengar-move {
     0% {
-        top: 10px;
+        top: 40px;
         right: 10px;
         transform: translate(0, 0);
     }
@@ -177,30 +193,30 @@ input[type=text]:focus {
         transform: translate(0, 0);
     }
     30% {
-        top: -95px;
+        top: -75px;
         right: 10px;
         transform: translate(0, 0);
     }
 
     50% {
-        top: -80px;
+        top: -60px;
         right: 10px;
         transform: translate(0, 0);
     }
      65%{
-        top: 10px;
+        top: 40px;
         right: 10px;
         transform: translate(0, 0);
     }
 
     80% {
-        top: 10px;
+        top: 40px;
         right: 10px;
         transform: translate(0, 0);
     }
 
     100% {
-        top: 10px;
+        top: 40px;
         right: 10px;
         transform: translate(0, 0);
     }
