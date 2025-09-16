@@ -144,7 +144,7 @@ input[type=text]:focus {
     margin-right: 260px;
     max-width: 70px;
     display: flex;
-    animation: gengar-move 3s infinite alternate linear;
+    animation: gengar-move 4.5s infinite alternate linear;
 }
 /* Animattion hover ei ole käytössä täl hetkel, koska animaatio on infinite loop :p*/
 .Animation-t:hover {
@@ -205,3 +205,4 @@ input[type=text]:focus {
         transform: translate(0, 0);
     }
 }
+
