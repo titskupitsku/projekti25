@@ -43,8 +43,11 @@ h2, h3 {
 .pokelayout > div.pokedex-header {
     grid-area: pokedex-header;
     text-align: center;
-    background: #a2b8a2;
-    font-weight: bold;
+    background: #b32424;
+    background: linear-gradient(0deg, rgba(179, 36, 36, 1) 35%, rgba(247, 35, 35, 1) 50%, rgba(255, 0, 0, 1) 66%);
+    font-weight: 900;
+    color: #eaeaea;
+    text-shadow: 2px 2px black;
     margin-left: 10px;
     margin-right: 10px;
 }
