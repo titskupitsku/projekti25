@@ -58,6 +58,8 @@ h2, h3 {
     background: lightcoral;
     margin-left: 10px;
     font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px gray;
 }
 .poke-link {
     color: inherit;
@@ -104,11 +106,13 @@ h2, h3 {
     background: lightpink;
     padding-left: 10px;
     margin-left: 10px;
+    color: black;
+    text-shadow: 2px 2px gray;
 }
 .pokelayout > div.poke-list {
     grid-area: poke-right;
     align-items: left;
-    background: lightgray;
+    background: #eaeaea;
     text-align: left;
     overflow-y: scroll;
     margin-right: 10px;
@@ -117,6 +121,8 @@ h2, h3 {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    color: black;
+    text-shadow: 2px 2px gray;
 }
 .poke-show {
     padding: 5px 2px;
