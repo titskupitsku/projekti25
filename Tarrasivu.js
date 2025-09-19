@@ -4,25 +4,15 @@ const Näytä = document.getElementById("Avaa");
 Button.addEventListener("click", event => {
    
     //Display thingy
-    if(Näytä.style.display === "none"){
+    if (Näytä.style.display === "none" || Näytä.style.display === "") {
         Näytä.style.display = "grid";
         Button.textContent = "Hide";
-    }
-    else{
+    } else {
         Näytä.style.display = "none";
         Button.textContent = "Show";
     }
-   
-   //Visibility asiat
-    if(Näytä.style.visibility === "hidden"){
-        Näytä.style.visibility = "visible";
-        Button.textContent = "Hide";
-    }
-    else{
-        Näytä.style.visibility = "hidden";
-        Button.textContent = "Show";
-    }
 });
+
 
 //Haku jutut
 document.getElementById('hakutarra').addEventListener('input', function(e) {
@@ -39,4 +29,18 @@ document.querySelectorAll('.Tarra-kuva').forEach(img => {
 
 // Event tab jutut
 function open(){}   
+
+document.querySelectorAll('.Tarra-kuva').forEach(img => {
+    img.style.cursor = "pointer";
+    img.addEventListener('click', function() {
+        const imagepop = document.getElementById('imgpoptarra');
+        const tarrai = document.getElementById('tar-img');
+        const caption = document.getElementById('imgtarraotsikko');
+        imagepop.style.display = "block";
+        tarrai.src = img.src;
+        caption.textContent = img.alt;
+    });
+});
+
+
 
