@@ -1,0 +1,20 @@
+CREATE TABLE kayttajat (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    etunimi VARCHAR(100) NOT NULL,
+    sukunimi VARCHAR(100) NOT NULL,
+    sahkoposti VARCHAR(255) NOT NULL UNIQUE,
+    salasana VARCHAR(255) NOT NULL,
+    luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tapahtumat (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kayttaja_id INT NOT NULL,
+    tapahtuman_nimi VARCHAR(255) NOT NULL,
+    aika_alku TIME NOT NULL,
+    aika_loppu TIME NOT NULL,
+    paivamaara DATE NOT NULL,
+    luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (kayttaja_id) REFERENCES kayttajat(id) ON DELETE CASCADE
+);
+
