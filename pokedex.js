@@ -1,7 +1,7 @@
 const pokemonData = {
     "0001": {
       name: "Bulbasaur",
-      image: "pokedex-kuvat/0001bulbasaur.png",
+      image: "pokedex-kuvat/pokemon_icon_001_00.png",
       type: "Poison"
     },
     "0002": {

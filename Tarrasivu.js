@@ -37,4 +37,6 @@ document.querySelectorAll('.Tarra-kuva').forEach(img => {
 });
 });
 
+// Event tab jutut
+function open(){}   
 
