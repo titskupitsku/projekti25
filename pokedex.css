@@ -17,6 +17,7 @@ p {
 h2, h3 {
     font-family: "Doto", sans-serif;
 }
+
 #pokeborderimg {
     border: 8px solid transparent;
     border-image: url("pokedex-kuvat/pokeborderimg.png") 90/ 30px 30px round;
@@ -37,6 +38,7 @@ h2, h3 {
     height: 420px;
     margin: 70px auto;
     padding-bottom: 10px;
+    font-family: "Doto", sans-serif;
 }
 .pokelayout > div.pokedex-header {
     grid-area: pokedex-header;
@@ -54,23 +56,48 @@ h2, h3 {
     margin-left: 10px;
     font-weight: bold;
 }
+.poke-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: grab;
+    transition: color 0.2s;
+}
+.poke-link:hover {
+    color: green;
+    text-decoration: none;
+}
 .pokelayout > div.poke-preview {
     grid-area: poke-preview;
     align-items: center;
     margin-left: 10px;
-    height: 200px;
+    height: auto;
 }
 .pokelayout > div.poke-preview img {
-    width: 60%;
+    width: 200px;
     height: auto;
     display: block;
     image-rendering: pixelated;
+    padding-right: 65px;
+    padding-left: 65px;
+    padding-top: 10px;
+    position: relative;
+    animation: pokemon-bounce 0.15s infinite alternate linear;
 }
-
+@keyframes pokemon-bounce {
+    0% {
+        top: 10px;
+        transform: translate(0,0)
+    }
+    100% {
+        top: -10px;
+        transform: translate(0,0)
+    }
+}
 .pokelayout > div.poke-type {
     grid-area: poke-bottom;
     align-items: center;
     text-align: center;
+    font-weight: bold;
     background: lightpink;
     padding-left: 10px;
     margin-left: 10px;
@@ -88,13 +115,11 @@ h2, h3 {
     flex-direction: column;
     padding: 10px;
 }
-
 .poke-show {
     padding: 5px 2px;
     border-radius: 10px;
     border: 2px solid #a72020;
     margin-bottom: 4px;
-    
 }
 .poke-show.active{
     padding: 6px 4px;
