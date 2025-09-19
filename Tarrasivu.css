@@ -236,3 +236,35 @@ background-color: inherit;
     }
 }
 
+.imgpoptarra {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top:60px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.img-pop-content {
+    margin: auto;
+    display: block;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+}
+
+#imgtarraotsikko {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
