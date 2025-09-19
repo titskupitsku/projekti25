@@ -9,13 +9,31 @@ const pokemonData = {
       name: "Ivysaur",
       page: "pokemonsivut/0002venusaur.html",
       image: "pokedex-kuvat/pokemon_icon_002_00.png",
-      type: "Grass/Poison"
+      type: "Grass - Poison"
     },
     "0003": {
       name: "Venusaur",
       page: "pokemonsivut/0003ivysaur.html",
       image: "pokedex-kuvat/pokemon_icon_003_00.png",
-      type: "Grass/Poison"
+      type: "Grass - Poison"
+    },
+    "0004": {
+      name: "Charmander",
+      page: "pokemonsivut/0004charmander.html",
+      image: "pokedex-kuvat/pokemon_icon_004_00.png",
+      type: "Fire"
+    },
+    "0005": {
+      name: "Charmeleon",
+      page: "pokemonsivut/0005charmeleon.html",
+      image: "pokedex-kuvat/pokemon_icon_005_00.png",
+      type: "Fire"
+    },
+    "0006": {
+      name: "Charizard",
+      page: "pokemonsivut/0006charizard.html",
+      image: "pokedex-kuvat/pokemon_icon_006_00.png",
+      type: "Fire - Flying"
     }
   };
 const pokeItems = document.querySelectorAll('.poke-show');
