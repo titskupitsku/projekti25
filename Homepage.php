@@ -1,3 +1,9 @@
+<?php
+session_start();
+$errorMessage = $_SESSION['error'] ?? '';
+$registerError = $_SESSION['register_error'] ?? '';
+unset($_SESSION['error'], $_SESSION['register_error']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +26,7 @@
                     <i class="fas fa-times close-btn" data-target="signinDialog"></i>
                 </div>
                 <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
-                <form method="post" action="register.php" class="form-content">
+                <form method="post" action="login.php" class="form-content">
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
                         <label for="email">Sähköpostiosoite</label>
@@ -38,6 +44,7 @@
                             <button type="button" onclick="document.getElementById('signinDialog').close()">Peruuta</button>
                         </div>      
                     </div>
+                    <p id="error-message" style="color: red;"><?php echo htmlspecialchars($errorMessage); ?></p>
                 </form>
     </dialog>
     <dialog id="registerDialog">
@@ -48,12 +55,12 @@
                 <div class="popup__description"> Onko sinulla jo tili? <span class="link" id="link2">Kirjaudu sisään!</span></div>
                 <form method="post" action="register.php" class="form-content">
                     <div class="form-group">
-                        <input type="text" id="firstname" name="username" placeholder="Syötä etunimesi" required />
-                        <label for="username">Etunimi</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Syötä etunimesi" required />
+                        <label for="firstname">Etunimi</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="lastname" name="username" placeholder="Syötä sukunimesi" required />
-                        <label for="username">Sukunimi</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Syötä sukunimesi" required />
+                        <label for="lastname">Sukunimi</label>
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
@@ -79,6 +86,7 @@
                              <button type="button" onclick="document.getElementById('registerDialog').close()">Peruuta</button>
                         </div>  
                     </div>
+                    <p id="register-error" style="color: red;"><?php echo htmlspecialchars($registerError); ?> </p>
                 </form>
     </dialog>
     <div class="header">
@@ -145,6 +153,29 @@
             <i class="fas fa-plus"></i>
          </button> 
     </div>
-    
+       <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const loginError = <?= json_encode($errorMessage) ?>;
+    const registerError =  <?php echo json_encode($registerError); ?>
+
+
+    if (loginError) {
+        const loginDialog = document.getElementById("signinDialog");
+        if (loginDialog && typeof loginDialog.showModal === "function") {
+            loginDialog.showModal();
+        }
+    }
+
+    if (registerError) {
+        const registerDialog = document.getElementById("registerDialog");
+        if (registerDialog && typeof registerDialog.showModal === "function") {
+            registerDialog.showModal();
+        }
+    }
+});
+
+
+
+</script>
 </body>
 </html>
