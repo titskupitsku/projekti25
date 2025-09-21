@@ -24,6 +24,7 @@ Button.addEventListener("click", event => {
     }
 });
 
+
 //Haku jutut
 document.getElementById('hakutarra').addEventListener('input', function(e) {
     const search = e.target.value.toLowerCase();
@@ -39,4 +40,18 @@ document.querySelectorAll('.Tarra-kuva').forEach(img => {
 
 // Event tab jutut
 function open(){}   
+
+document.querySelectorAll('.Tarra-kuva').forEach(img => {
+    img.style.cursor = "pointer";
+    img.addEventListener('click', function() {
+        const imagepop = document.getElementById('imgpoptarra');
+        const tarrai = document.getElementById('tar-img');
+        const caption = document.getElementById('imgtarraotsikko');
+        imagepop.style.display = "block";
+        tarrai.src = img.src;
+        caption.textContent = img.alt;
+    });
+});
+
+
 
