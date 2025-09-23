@@ -279,6 +279,7 @@ h2, h3 {
     align-items: left;
     text-align: left;
 }
+/* pokepages data*/
 .pokelayout_DATA {
     display: grid;
     grid-template-rows: 30px 40px 1fr 50px 50px 50px;
