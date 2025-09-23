@@ -42,29 +42,52 @@ h2, h3 {
 }
 .pokelayout > div.pokedex-header {
     grid-area: pokedex-header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background: #b32424;
     background: linear-gradient(0deg, rgba(179, 36, 36, 1) 35%, rgba(247, 35, 35, 1) 50%, rgba(255, 0, 0, 1) 66%);
     font-weight: 900;
-    color: #dcdcdc;
-    text-shadow: 2px 2px black;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 3px 3px black;
     margin-left: 10px;
     margin-right: 10px;
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
+    margin-top: 10px;
+}
+.poke-name {
+    position: relative;
+}
+.poke-name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 1);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 0;
 }
 .pokelayout > div.poke-name {
     grid-area: poke-name;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: #b32424;
-    background: linear-gradient(0deg, rgba(179, 36, 36, 1) 35%, rgba(247, 35, 35, 1) 50%, rgba(255, 0, 0, 1) 66%);
+    background: #fff;
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
     margin-left: 10px;
+    padding-top: 5px;
     font-weight: 900;
-    color: #eaeaea;
-    text-shadow: 2px 2px black;
+    font-size: 20px;
+    color: black;
+    text-shadow: 2px 2px rgb(189, 189, 189);
 }
 .poke-link {
     color: inherit;
@@ -103,17 +126,35 @@ h2, h3 {
         transform: translate(0,0)
     }
 }
+.poke-type {
+    position: relative;
+}
+.poke-type::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 1);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 0;
+}
 .pokelayout > div.poke-type {
     grid-area: poke-bottom;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     font-weight: 900;
-    background: #b32424;
-    background: linear-gradient(0deg, rgba(179, 36, 36, 1) 35%, rgba(247, 35, 35, 1) 50%, rgba(255, 0, 0, 1) 66%);
+    font-size: 20px;
+    background: #fff;
     padding-left: 10px;
+    padding-top: 5px;
     margin-left: 10px;
-    color: #eaeaea;
-    text-shadow: 2px 2px black;
+    color: black;
+    text-shadow: 2px 2px rgb(189, 189, 189);
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
 }
@@ -127,84 +168,85 @@ h2, h3 {
     left: 0;
     width: 48px;
     height: 100%;
-    background-color: #e3350d;
+    background-color: rgba(255, 0, 0, 1);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     z-index: 0;
 }
 .pokelayout > div.poke-list {
     grid-area: poke-right;
-    align-items: left;
+    display: flex;
     background: #fff;
     text-align: left;
     overflow-y: scroll;
     margin-right: 10px;
     font-weight: 900;
     font-family: "Doto", sans-serif;
-    display: flex;
     flex-direction: column;
-    padding: 10px;
     color: black;
-    text-shadow: 2px 2px rgb(171, 171, 171);
+    text-shadow: 2px 2px rgb(189, 189, 189);
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
-}
-.poke-show {
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index: 1;
-    padding: 4px 12px 4px 0;
-    margin-bottom: 2px;
-    font-size: 18px;
-    font-family: "Doto", sans-serif;
-    font-weight: 900;
-    color: #222;
-    cursor: grab;
-    transition: border 0.1s, background 0.1s;
-}
-.poke-show.active {
-    border: 2px solid #e3350d;
-    border-radius: 16px;
-    background: transparent;
-    box-shadow: 0 4px 16px rgba(227,53,13,0.12);
-    color: #e3350d;
-    font-weight: 900;
-    transform: scale(1.03);
-}
-.poke-show:hover {
-    border: 2px solid #e3350d;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
-    background: transparent;
-    font-weight: 900;
+    overflow: visible;
 }
 .poke-list-img {
-    width: 32px;
-    height: 32px;
+    display: flex;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    image-rendering: pixelated;
     border-radius: 50%;
-    object-fit: cover;
-    margin: 4px 12px 4px 8px;
+    margin-right: 0px;
+    margin-left: 5px;
     background: transparent;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     z-index: 2;
 }
 .poke-list-img-bg {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    margin-right: 8px;
+    margin-right: 20px;
+}
+.poke-show {
+    display: flex;
+    align-items: center;
+    position: static;
+    z-index: 1;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #222;
+    cursor: grab;
+    transition: border 0.1s, background 0.1s;
+}
+.poke-show.active {
+    position: relative;
+    border: 3px solid #e3350d;
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 2px inset #fff, 0 4px 16px rgba(227,53,13,0.12);
+    font-weight: 900;
+}
+.poke-show:hover {
+    position: relative;
+    border: 3px solid #e3350d;
+    border-radius: 18px;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 2px inset #fff, 0 4px 16px rgba(44, 62, 80, 0.15);
+    background: transparent;
+    color: #e3350d;
+    font-weight: 900;
 }
 /* pokepages */
-.pokelayout_page {
+.pokelayout_INFO {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 50px 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 50px 1fr;
     grid-template-areas:
-        "pokedex-header pokedex-header"
-        "poke-preview poke-right"
-        "poke-preview poke-right"
-        "poke-bottom poke-bottom";
+        "pokedex-header pokedex-header pokedex-header"
+        "poke-preview poke-preview poke-plate"
+        "poke-preview poke-mark poke-measure"
+        "poke-bottom poke-bottom poke-bottom";
     gap: 10px;
     border: 3px solid #a72020;
     background: #eaeaea;
@@ -236,4 +278,21 @@ h2, h3 {
     background-color: #d0e6d0;
     align-items: left;
     text-align: left;
+}
+.pokelayout_DATA {
+    display: grid;
+    grid-template-rows: 30px 40px 1fr 50px 50px 50px;
+    grid-template-columns: 200px 50px 50px 50px;
+    grid-template-areas:
+        "pokedex-nav pokedex-nav pokedex-nav pokedex-nav"
+        "poke-basic poke-basic poke-basic poke-basic"
+        "poke-data poke-data poke-evo poke-evo"
+        "poke- poke-";
+    gap: 10px;
+    border: 3px solid #a72020;
+    background: #eaeaea;
+    width: 57%;
+    height: 420px;
+    margin: 70px auto;
+    padding-bottom: 10px;
 }
