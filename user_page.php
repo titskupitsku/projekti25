@@ -1,6 +1,8 @@
 <?php
 session_start();
 $firstname = $_SESSION['firstname'] ?? 'Käyttäjä';
+$lastname = $_SESSION['lastname'] ?? '';
+$initials = strtoupper(substr($firstname, 0, 1) . substr($lastname, 0, 1));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,30 +20,31 @@ $firstname = $_SESSION['firstname'] ?? 'Käyttäjä';
     <title>käyttäjä</title>
 </head>
 <body>
-    <dialog id="accountDialog" class="account-dialog">
-        <div>
-            <p><strong>Tilitiedot</strong></p>
-            <form action="logout.php" method="POST">
-                <button type="submit">Kirjaudu ulos</button>
-            </form>
-            <form action="delete_account.php" method="POST" onsubmit="return confirm('Haluatko varmasti poistaa tilisi?');">
-                <button type="submit" class="danger">Poista tili</button>
-            </form>
-            <button onclick="closeDialog()">Sulje</button>
-        </div>
-    </dialog>
-    
-
-
-    
     <div class="header">
         <div class="main-nav">
-            <a href="Homepage.html" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
+            <a href="user_page.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
             <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
-        <div class="sign-in"><button id="avaaDialog" onclick="openDialog()"><span class="account-icon"><i class="fas fa-user"></i></span><?php echo htmlspecialchars($firstname); ?></button></div>
+        <div class="sign-in"><button id="accountButton" onclick="toggleAccountMenu()"><span class="account-icon"><i class="fas fa-user"></i></span><?php echo htmlspecialchars($firstname); ?></button>
+            <div id="accountMenu" class="account-dialog hidden">
+                <div class="user-info">
+                    <div class="avatar-circle"><?php echo $initials; ?></div>
+                    <div>
+                         <p><strong><?php echo htmlspecialchars($firstname); ?></strong></p>
+                        <p><?php echo htmlspecialchars($_SESSION['email'] ?? 'sähköposti puuttuu'); ?></p>
+                    </div>
+                </div>
+                <form action="delete_account.php" method="POST" onsubmit="return confirm('Haluatko varmasti poistaa tilisi?');">
+                    <button type="submit" class="danger">Poista tili</button>
+                </form>
+                <form action="logout.php" method="POST">
+                    <button type="submit"><i class="fas fa-sign-out-alt"></i>Kirjaudu ulos</button>
+                </form>
+            </div>
+        </div>
     </div>
+    <div id="overlay" class="overlay hidden"></div>
     <div class="container">
         <div class="left">
             <div class="calendar">

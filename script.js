@@ -8,11 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+
 function openDialog() {
     let form = document.querySelector("#signinDialog form"); 
     form.reset();
     
-    document.getElementById("signinDialog").showModal(); 
+    document.getElementById("signinDialog").show(); 
 }
 document.addEventListener("DOMContentLoaded", () => {
   const registerLink = document.getElementById("link1");
