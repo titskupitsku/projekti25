@@ -28,7 +28,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
                 <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
                 <form method="post" action="login.php" class="form-content">
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <input type="email" id="email1" name="email" placeholder="Sähköpostiosoite" required />
                         <label for="email">Sähköpostiosoite</label>
                     </div>
                     <div class="form-group">
@@ -91,7 +91,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
     </dialog>
     <div class="header">
         <div class="main-nav">
-            <a href="Homepage.html" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
+            <a href="Homepage.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
             <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
