@@ -28,7 +28,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
                 <div class="popup__description"> Ei vielä tiliä? <span class="link" id="link1">Rekisteröidy nyt!</span></div>
                 <form method="post" action="login.php" class="form-content">
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Sähköpostiosoite" required />
+                        <input type="email" id="email1" name="email" placeholder="Sähköpostiosoite" required />
                         <label for="email">Sähköpostiosoite</label>
                     </div>
                     <div class="form-group">
