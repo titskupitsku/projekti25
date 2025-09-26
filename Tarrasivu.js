@@ -44,14 +44,37 @@ function open(){}
 document.querySelectorAll('.Tarra-kuva').forEach(img => {
     img.style.cursor = "pointer";
     img.addEventListener('click', function() {
-        const imagepop = document.getElementById('imgpoptarra');
+    const imagepop = document.getElementById('imgpoptarra');
         const tarrai = document.getElementById('tar-img');
         const caption = document.getElementById('imgtarraotsikko');
-        imagepop.style.display = "block";
-        tarrai.src = img.src;
-        caption.textContent = img.alt;
+         imagepop.style.display = "block";
+         tarrai.src = img.src;
+         caption.textContent = img.alt;
     });
 });
 
+
+ // filter jutut
+ document.addEventListener('DOMContentLoaded', function() {
+    const filter = document.getElementById('elementfilter');
+    const images = document.querySelectorAll('.Tarra-kuva');
+
+    filter.addEventListener('change', function() {
+     const selected = filter.value;
+        images.forEach(img => {
+            const type1 = img.getAttribute('data-type1');
+            const type2 = img.getAttribute('data-type2');
+            if (
+                selected === 'All' ||
+                type1 === selected ||
+                type2 === selected
+            ) {
+                img.style.display = '';
+            } else {
+                img.style.display = 'none';
+            }
+        });
+    });
+});
 
 
