@@ -1,5 +1,5 @@
 :root{
-    --primary-clr:#f44336;
+    --primary-clr:#fd5245;
     --secondary-clr: #e2160b; 
     --accent-clr: #0d820d;  
     --neutral-clr: #f5f5f5;
@@ -58,32 +58,50 @@ body{
 .nav-item.active i {
      color: #fff;
 }
-.sign-in{
+
+@keyframes hoverPulse {
+  0%, 100% {
+    background: linear-gradient(90deg, #3f4458, transparent);
+    transform: scale(1);
+  }
+  50% {
+    background: linear-gradient(90deg, var(--primary-clr), transparent);
+    transform: scale(1.09);
+  }
+}
+
+.sign-in .main-button.animate-hover {
+  animation: hoverPulse 1s ease-in-out infinite;
+}
+.sign-in {
   padding: 5px 15px;
   margin-top: 5px;
   position: relative;
 }
-.sign-in button{
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    background-color:var(--primary-clr);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: 600;
+
+.sign-in .main-button {
+  display: flex;              
+  align-items: center;         
+  gap: 8px;                    
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: var(--primary-clr);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.5s ease;
+ 
 }
 
-.sign-in button i{
-    margin-right: 5px;
+.sign-in .main-button:hover{
+  transform: scale(1.09);
 }
-.sign-in button:hover{
-    background: var(--accent-clr);
-    color: #000;
-    transform: scale(1.1);
-}
+
+
 dialog {
     position: fixed;
     top: 50%;
@@ -246,17 +264,9 @@ dialog input:focus::placeholder {
 
 .account-icon .fa-user {
   font-size: 18px;
-  color: #333;
-}
-.account-dialog button {
-  margin: 8px 0;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f44336;
-  cursor: pointer;
   color: #fff;
 }
+
 
 
 
@@ -271,7 +281,42 @@ dialog input:focus::placeholder {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   min-width: 300px;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; 
+
 }
+.account-dialog form:last-child {
+  align-self: flex-end; /* pushes the logout form to the right */
+
+}
+
+.sign-out{
+  display: flex;              
+  align-items: center;         
+  gap: 8px;                    
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background-color: #3f4458;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.sign-out i{
+  order: -1;
+  transition: order 0.5s ease;
+}
+.sign-out:hover i {
+  order: 1;
+}
+.sign-out:hover{
+  background-color: var(--primary-clr);
+}
+
 .user-info{
   display: flex;
   flex-direction: row;
@@ -304,6 +349,22 @@ dialog input:focus::placeholder {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+.account-dialog .poistili {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: var(--secondary-clr); /* link-style blue */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.account-dialog .poistili:hover {
+  color: blue;
+  
+}
+
+
 
 
 
@@ -477,7 +538,7 @@ dialog input:focus::placeholder {
 .events {
   width: 100%;
   height: 100%;
-  max-height: 600px;
+  max-height: 320px;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -497,10 +558,10 @@ dialog input:focus::placeholder {
   cursor: pointer;
   border-radius: 10px;
   border-bottom: 2px solid#373c4f;
+  background: #ff0f02;
 }
 
 .events .event:hover {
-  background: #ff0f02;
   transform: scale(1.3s);
 }
 .events .event .title {
@@ -514,14 +575,14 @@ dialog input:focus::placeholder {
   margin-left: 20px;
 }
 .events .event i {
-  color: #ff0f02;
+  color: #6a6882;
   font-size: 1rem;
 }
 .events .event:hover i {
   color: #fff;
 }
 .events .event .event-time {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: #222224;
   margin-left: 15px;
@@ -666,7 +727,7 @@ dialog input:focus::placeholder {
 }
 .add-event {
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   right: 30px;
   width: 50px;
   height: 50px;
@@ -686,4 +747,124 @@ dialog input:focus::placeholder {
 }
 .add-event i {
   pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .container {
+    min-height: 100vh;
+    flex-direction: column;
+    border-radius: 0;
+    width: 90%;
+  }
+  .container .left {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+  }
+  .container .right {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+  }
+
+  .events {
+    margin-bottom:80px ;
+  }
+  .add-event-wrapper {
+    bottom: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header{
+    flex-direction: column;
+  }
+  .main-nav{
+    flex-direction: column;
+    gap:5px
+  }
+  .nav-item{
+    width: 100%;
+    padding: 0;
+
+  }
+  .sign-in .main-button{
+    padding: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  .container{
+    width: 90% ;
+  }
+  .calendar .month .prev,
+  .calendar .month .next {
+  font-size: large;}
+  .calendar .month {
+    height: 75px;
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  .calendar .weekdays {
+    height: 50px;
+    font-size: 1rem;
+  }
+  .calendar .days .day {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+  .calendar .days .day.active,
+  .calendar .days .day.today {
+    font-size: 1rem;
+  }
+  .right .today-date {
+    width: 100%;
+    
+  }
+  .right .today-date .event-day{
+    font-size: 1.5rem;
+  }
+  .right .today-date .event-date{
+    font-size: 1rem;
+  }
+  .events{
+    margin-bottom: 80px;
+  }
+.add-event-wrapper{
+  width: 100%;
+}
+
+  dialog {
+    width: 90%;
+    max-width: none;
+    padding: 5px;
+  }
+ .buttons{
+  width: 90%;
+ }
+ .form-group{
+  width: 100%;
+ }
+  .popup__header {
+    font-size: 1.5rem;
+  }
+
+  .popup__description {
+    font-size: 16px;
+  }
+  dialog input {
+  width: 80%;
+
+}
+
+.buttons .button button {
+    font-size: 1rem;
+}
+.account-dialog{
+  min-width: 100px;
+}
+
 }
