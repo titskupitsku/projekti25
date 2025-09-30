@@ -14,7 +14,7 @@ function openDialog() {
     let form = document.querySelector("#signinDialog form"); 
     form.reset();
     
-    document.getElementById("signinDialog").show(); 
+    document.getElementById("signinDialog").showModal(); 
 }
 document.addEventListener("DOMContentLoaded", () => {
   const registerLink = document.getElementById("link1");
@@ -88,20 +88,22 @@ let selectedMonth = null;
 let selectedYear = null;
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Tammikuu",
+  "Helmikuu",
+  "Maaliskuu",
+  "Huhtikuu",
+  "Toukokuu",
+  "Kesäkuu",
+  "Heinäkuu",
+  "Elokuu",
+  "Syyskuu",
+  "Lokakuu",
+  "Marraskuu",
+  "Joulukuu",
 ];
-
+const weekdays = [
+  "Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"
+];
 
 const eventsArr = [];
 getEvents()
@@ -317,7 +319,9 @@ addEventTo.addEventListener("input", (e) => {
 
 function getActiveDay(date) {
   const day = new Date(year, month, date);
-  const dayName = day.toString().split(" ")[0];
+  //const dayName = day.toString().split(" ")[0];
+  
+  const dayName = weekdays[day.getDay()];
   eventDay.innerHTML = dayName;
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
@@ -345,7 +349,7 @@ function updateEvents(date) {
   });
   if (events === "") {
     events = `<div class="no-event">
-            <h3>No Events</h3>
+            <h3>Ei Tapahtumia</h3>
         </div>`;
   }
   eventsContainer.innerHTML = events;
@@ -482,3 +486,14 @@ function getEvents() {
   }
   eventsArr.push(...JSON.parse(localStorage.getItem("events")));
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const signInButton = document.querySelector(".sign-in button");
+
+  // Add the animation class on hover
+  signInButton.classList.add("animate-hover");
+
+  // Remove the animation class after button is clicked
+  signInButton.addEventListener("click", function () {
+    this.classList.remove("animate-hover");
+  });
+});

@@ -91,7 +91,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
     </dialog>
     <div class="header">
         <div class="main-nav">
-            <a href="Homepage.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
+            <a href="index.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
             <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
