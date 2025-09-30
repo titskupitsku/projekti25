@@ -10,6 +10,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./P.png">
     <link 
         rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
@@ -91,12 +92,14 @@ unset($_SESSION['error'], $_SESSION['register_error']);
     </dialog>
     <div class="header">
         <div class="main-nav">
-            <a href="Homepage.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
+            <a href="index.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
             <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
-        <div class="sign-in"><button id="avaaDialog" onclick="openDialog()"><i class="fas fa-sign-in-alt"></i>Kirjaudu sisään</button></div>
+        <div class="sign-in"><button class="main-button" id="avaaDialog" onclick="openDialog()" title="Kirjaudu sisään, jotta voit käyttää tallennettuja tapahtumiasi millä tahansa laitteella"><i class="fas fa-sign-in-alt"></i>Kirjaudu sisään</button>
+        </div>    
     </div>
+    <div class="remainder"> </div>
     <div class="container">
         <div class="left">
             <div class="calendar">
@@ -130,22 +133,22 @@ unset($_SESSION['error'], $_SESSION['register_error']);
 
             <div class="add-event-wrapper">
                 <div class="add-event-header">
-                    <div class="title">Add Event</div>
+                    <div class="title">Lisää Tapahtuma</div>
                     <i class="fas fa-times close"></i>
                 </div>
                 <div class="add-event-body">
                      <div class="add-event-input">
-                        <input type="text" placeholder="Event Name" class="event-name" />
+                        <input type="text" placeholder="Tapahtuman nimi" class="event-name" />
                      </div>
                      <div class="add-event-input">
-                        <input type="text" placeholder="Event Time From" class="event-time-from">
+                        <input type="text" placeholder="Tapahtuman aika alkaen" class="event-time-from">
                      </div>
                      <div class="add-event-input">
-                        <input type="text" placeholder="Event Time To" class="event-time-to">
+                        <input type="text" placeholder="Tapahtuman aika päättyy" class="event-time-to">
                      </div>
                 </div>
                 <div class="add-event-footer">
-                    <button class="add-event-btn">Add Event</button>
+                    <button class="add-event-btn" title="Kirjaudu sisään tallentaaksesi tapahtumat pysyvästi">Lisää</button>
                 </div>
              </div>
         </div>  
