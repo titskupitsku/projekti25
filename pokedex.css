@@ -58,6 +58,7 @@ h2, h3 {
     border-radius: 8px;
     margin-top: 10px;
 }
+/*pseudoclass start*/
 .poke-name {
     position: relative;
 }
@@ -67,12 +68,13 @@ h2, h3 {
     top: 0;
     left: 0;
     width: 48px;
-    height: 100%;
+    height: auto;
     background-color: rgba(255, 0, 0, 1);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     z-index: 0;
 }
+/*end*/
 .pokelayout > div.poke-name {
     grid-area: poke-name;
     display: flex;
@@ -116,6 +118,7 @@ h2, h3 {
     position: relative;
     animation: pokemon-bounce 0.15s infinite alternate linear;
 }
+/*pokeanimaatio*/
 @keyframes pokemon-bounce {
     0% {
         top: 10px;
@@ -126,6 +129,7 @@ h2, h3 {
         transform: translate(0,0)
     }
 }
+/*pseudo-element start*/
 .poke-type {
     position: relative;
 }
@@ -141,6 +145,7 @@ h2, h3 {
     border-bottom-left-radius: 5px;
     z-index: 0;
 }
+/*end*/
 .pokelayout > div.poke-type {
     grid-area: poke-bottom;
     display: flex;
@@ -158,23 +163,23 @@ h2, h3 {
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
 }
-.poke-list {
-    position: relative;
-}
-.poke-list::before {
-    content: "";
+.poke-list-redline {
     position: absolute;
     top: 0;
     left: 0;
     width: 48px;
-    height: 100%;
+    min-height: 100%;
+    height: 100vh;
     background-color: rgba(255, 0, 0, 1);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
 }
 .pokelayout > div.poke-list {
     grid-area: poke-right;
+    position: relative;
     display: flex;
     background: #fff;
     text-align: left;
@@ -187,7 +192,9 @@ h2, h3 {
     text-shadow: 2px 2px rgb(189, 189, 189);
     border: 3px solid rgb(20, 20, 20);
     border-radius: 8px;
-    overflow: visible;
+    overflow: auto;
+    scrollbar-width: none; /*invis scrollbar firefox*/
+    -ms-overflow-style: none; /*invis scrollbar ie + edge*/
 }
 .poke-list-img {
     display: flex;
@@ -212,30 +219,42 @@ h2, h3 {
 .poke-show {
     display: flex;
     align-items: center;
-    position: static;
     z-index: 1;
     margin-bottom: 0;
     font-size: 18px;
     color: #222;
     cursor: grab;
-    transition: border 0.1s, background 0.1s;
 }
-.poke-show.active {
-    position: relative;
+#pokeportal {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+.pokeportal-border {
+    position: fixed;
     border: 3px solid #e3350d;
     border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 2px #fff, 0 4px 16px rgba(227,53,13,0.12);
     background: transparent;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 2px inset #fff, 0 4px 16px rgba(227,53,13,0.12);
-    font-weight: 900;
+    pointer-events: none;
+    transition: border 0.1s, background 0.1s;
 }
+.poke-show.active,
 .poke-show:hover {
     position: relative;
     border: 3px solid #e3350d;
     border-radius: 18px;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 2px inset #fff, 0 4px 16px rgba(44, 62, 80, 0.15);
     background: transparent;
-    color: #e3350d;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 2px inset #fff, 0 4px 16px rgba(227,53,13,0.12); /*spread radius on white + inset > inside*/
     font-weight: 900;
+}
+.poke-show:hover {
+    color: #e3350d;
 }
 /* pokepages */
 .pokelayout_INFO {

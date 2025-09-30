@@ -3,7 +3,7 @@ const pokemonData = {
       name: "Bulbasaur",
       page: "pokemonsivut/0001bulbasaur.html",
       image: "pokedex-kuvat/pokemon_icon_001_00.png",
-      type: "Poison"
+      type: "Grass - Poison"
     },
     "0002": {
       name: "Ivysaur",
@@ -34,7 +34,25 @@ const pokemonData = {
       page: "pokemonsivut/0006charizard.html",
       image: "pokedex-kuvat/pokemon_icon_006_00.png",
       type: "Fire - Flying"
-    }
+    },
+    "0007": {
+      name: "Squirtle",
+      page: "pokemonsivut/0007squirtle.html",
+      image: "pokedex-kuvat/pokemon_icon_007_00.png",
+      type: "Water"
+    },
+    "0008": {
+      name: "Wartortle",
+      page: "pokemonsivut/0008wartortle.html",
+      image: "pokedex-kuvat/pokemon_icon_008_00.png",
+      type: "Water"
+    },
+    "0009": {
+      name:"Blastoise",
+      page: "pokemonsivut/0009blastoise.html",
+      image: "pokedex-kuvat/pokemon_icon_009_00.png",
+      type: "Water"
+    },
   };
 const pokeItems = document.querySelectorAll('.poke-show');
   pokeItems.forEach(item => {
@@ -51,4 +69,46 @@ const pokeItems = document.querySelectorAll('.poke-show');
     });
   });
 
+document.addEventListener('DOMContentLoaded', function () { //call function
+  const portal = document.getElementById('pokeportal');
+  let lastPortal = null;
+  function showPortalBorder(target) {
+    const rect = target.getBoundingClientRect(); //return the size of an element and its posi --> how we get the right size for the overflowing border
+    const list = target.closest('.poke-list'); //find container
+    if (!list) return;
+    const listRect = list.getBoundingClientRect(); //overflow correctly only on fully visible items
+    if (
+      rect.top < listRect.top || 
+      rect.bottom > listRect.bottom
+    ) {
+      if (lastPortal) lastPortal.remove();
+      lastPortal = null;
+      return;
+    }
+    // yeet old border v
+    if (lastPortal) lastPortal.remove();
+    // new border v
+    const border = document.createElement('div');
+    border.className = 'pokeportal-border';
+    border.style.top = rect.top + 'px';
+    border.style.left = rect.left + 'px';
+    border.style.width = rect.width + 'px';
+    border.style.height = rect.height + 'px';
+    portal.appendChild(border);
+    lastPortal = border;
+  } // positioning the border correctly according to the list items so it overflows the parent element, since browsers don't allow that for css in child elements :-)
+  function hidePortalBorder() {
+    if (lastPortal) lastPortal.remove();
+    lastPortal = null;
+  }
+  // how the border activates
+  document.querySelectorAll('.poke-show').forEach(item => {
+    item.addEventListener('mouseenter', () => showPortalBorder(item));
+    item.addEventListener('mouseleave', hidePortalBorder);
+  });
+
+//portal posi, prevent misalignment + resize incase of window sizing
+  window.addEventListener('scroll', hidePortalBorder, true);
+  window.addEventListener('resize', hidePortalBorder);
+});
 
