@@ -24,7 +24,7 @@ $initials = strtoupper(substr($firstname, 0, 1) . substr($lastname, 0, 1));
     <div class="header">
         <div class="main-nav">
             <a href="user_page.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
-            <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
+            <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokédex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
         <div class="sign-in"><button id="accountButton" class="main-button" onclick="toggleAccountMenu()"><span class="account-icon"><i class="fas fa-user"></i></span><?php echo htmlspecialchars($firstname); ?></button>

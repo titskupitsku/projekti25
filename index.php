@@ -18,7 +18,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
         crossorigin="anonymous" 
         referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
-    <title>Etusivu</title>
+    <title>Pokeplanner</title>
 </head>
 <body>
     <dialog id="signinDialog">
@@ -93,7 +93,7 @@ unset($_SESSION['error'], $_SESSION['register_error']);
     <div class="header">
         <div class="main-nav">
             <a href="index.php" class="nav-item"><i class="fas fa-home"></i><span>Etusivu</span></a>
-            <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokedex</span></a>
+            <a href="Pokedex.html" class="nav-item"><i class="fas fa-database"></i><span>Pokédex</span></a>
             <a href="Tarrasivu.html" class="nav-item"><i class="fas fa-sticky-note"></i><span>Poketarrat</span></a>
         </div>
         <div class="sign-in"><button class="main-button" id="avaaDialog" onclick="openDialog()" title="Kirjaudu sisään, jotta voit käyttää tallennettuja tapahtumiasi millä tahansa laitteella"><i class="fas fa-sign-in-alt"></i>Kirjaudu sisään</button>
