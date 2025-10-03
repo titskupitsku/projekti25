@@ -58,26 +58,10 @@ h2, h3 {
     border-radius: 8px;
     margin-top: 10px;
 }
-/*pseudoclass start*/
-.poke-name {
-    position: relative;
-}
-.poke-name::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 48px;
-    height: auto;
-    background-color: rgba(255, 0, 0, 1);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    z-index: 0;
-}
-/*end*/
 .pokelayout > div.poke-name {
     grid-area: poke-name;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -133,7 +117,7 @@ h2, h3 {
 .poke-type, .pokebottom {
     position: relative;
 }
-.poke-type::before, .pokebottom::before {
+.poke-name::before, .poke-type::before, .pokebottom::before {
     content: "";
     position: absolute;
     top: 0;
@@ -260,7 +244,7 @@ h2, h3 {
 .pokelayout_INFO {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    grid-template-rows: 60px 1.5fr 1fr 60px;
+    grid-template-rows: 60px 1.5fr 55px 1fr;
     grid-template-areas:
         "info-header info-header info-header"
         "info-preview poke-plate poke-plate"
@@ -273,6 +257,13 @@ h2, h3 {
     margin: 100px auto;
     padding-bottom: 10px;
     font-family: "Doto", sans-serif;
+}
+.pokelayout_INFO > a:link, a:visited, a:active {
+    color: inherit;
+}
+.pokelayout_INFO a:hover {
+    color: black;
+    text-shadow: 3px 3px rgb(189, 189, 189)
 }
 .pokelayout_INFO > div.info-header {
     grid-area: info-header;
@@ -304,31 +295,63 @@ h2, h3 {
     height: auto;
 }
 .pokelayout_INFO > div.info-preview img {
-    width: auto; /*200*/
+    width: 200px; /*200*/
     height: auto;
-    display: block;
+    display: box;
     position: relative;
     image-rendering: pixelated;
     padding-right: 65px;
     padding-left: 65px;
+    padding-bottom: 30px;
     padding-top: 10px;
     animation: pokemon-bounce 0.15s infinite alternate linear;
 }
 .pokelayout_INFO > div.poke-plate {
     grid-area: poke-plate;
     display: flex;
-    background-color: #d0e6d0;
+    background-color: #fff;
     align-items: center;
     text-align: center;
     padding-left: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 35px;
+    margin-right: 30px;
+    font-weight: 900;
+}
+.poke-plate-img {
+    display: flex;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    image-rendering: pixelated;
+    border-radius: 50%;
+    margin-right: 0px;
+    margin-left: 5px;
+    background: transparent;
+}
+.poke-plate-img-bg {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
 }
 .pokelayout_INFO > div.poke-mark {
     grid-area: poke-mark;
-    display: flex;
+    display: box;
     background-color: #d0e6d0;
-    align-items: center;
-    text-align: center;
+    margin-right: 10px;
+    font-weight: 900;
+
+}
+.pokelayout_INFO > div.poke-mark img {
+    width: 30px;
+    height: auto;
+    display: box;
+    position: relative;
+    image-rendering: pixelated;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 .pokelayout_INFO > div.poke-measure {
     grid-area: poke-measure;
@@ -336,6 +359,7 @@ h2, h3 {
     background-color: #d0e6d0;
     align-items: center;
     text-align: center;
+    font-weight: 900;
 }
 .pokelayout_INFO > div.pokebottom {
     grid-area: pokebottom;

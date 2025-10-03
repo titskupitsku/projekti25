@@ -53,6 +53,24 @@ const pokemonData = {
       image: "pokedex-kuvat/pokemon_icon_009_00.png",
       type: "Water"
     },
+    "0010": {
+      name:"Caterpie",
+      page: "pokemonsivut/0010caterpie.html",
+      image: "pokedex-kuvat/pokemon_icon_010_00.png",
+      type: "Bug"
+    },
+    "0011": {
+      name:"Metapod",
+      page: "pokemonsivut/0011metapod.html",
+      image: "pokedex-kuvat/pokemon_icon_011_00.png",
+      type: "Bug"
+    },
+    "0012": {
+      name:"Butterfree",
+      page: "pokemonsivut/0012butterfree.html",
+      image: "pokedex-kuvat/pokemon_icon_012_00.png",
+      type: "Bug"
+    },
   };
 const pokeItems = document.querySelectorAll('.poke-show');
   pokeItems.forEach(item => {
