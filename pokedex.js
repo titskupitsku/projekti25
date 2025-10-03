@@ -3,73 +3,73 @@ const pokemonData = {
       name: "Bulbasaur",
       page: "pokemonsivut/0001bulbasaur.html",
       image: "pokedex-kuvat/pokemon_icon_001_00.png",
-      type: "Grass - Poison",
+      type: "Seen: 1010 <br> Owned: 1010",
     },
     "0002": {
       name: "Ivysaur",
       page: "pokemonsivut/0002venusaur.html",
       image: "pokedex-kuvat/pokemon_icon_002_00.png",
-      type: "Grass - Poison"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0003": {
       name: "Venusaur",
       page: "pokemonsivut/0003ivysaur.html",
       image: "pokedex-kuvat/pokemon_icon_003_00.png",
-      type: "Grass - Poison"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0004": {
       name: "Charmander",
       page: "pokemonsivut/0004charmander.html",
       image: "pokedex-kuvat/pokemon_icon_004_00.png",
-      type: "Fire"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0005": {
       name: "Charmeleon",
       page: "pokemonsivut/0005charmeleon.html",
       image: "pokedex-kuvat/pokemon_icon_005_00.png",
-      type: "Fire"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0006": {
       name: "Charizard",
       page: "pokemonsivut/0006charizard.html",
       image: "pokedex-kuvat/pokemon_icon_006_00.png",
-      type: "Fire - Flying"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0007": {
       name: "Squirtle",
       page: "pokemonsivut/0007squirtle.html",
       image: "pokedex-kuvat/pokemon_icon_007_00.png",
-      type: "Water"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0008": {
       name: "Wartortle",
       page: "pokemonsivut/0008wartortle.html",
       image: "pokedex-kuvat/pokemon_icon_008_00.png",
-      type: "Water"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0009": {
       name:"Blastoise",
       page: "pokemonsivut/0009blastoise.html",
       image: "pokedex-kuvat/pokemon_icon_009_00.png",
-      type: "Water"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0010": {
       name:"Caterpie",
       page: "pokemonsivut/0010caterpie.html",
       image: "pokedex-kuvat/pokemon_icon_010_00.png",
-      type: "Bug"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0011": {
       name:"Metapod",
       page: "pokemonsivut/0011metapod.html",
       image: "pokedex-kuvat/pokemon_icon_011_00.png",
-      type: "Bug"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
     "0012": {
       name:"Butterfree",
       page: "pokemonsivut/0012butterfree.html",
       image: "pokedex-kuvat/pokemon_icon_012_00.png",
-      type: "Bug"
+      type: "Seen: 1010 <br> Owned: 1010"
     },
   };
 const pokeItems = document.querySelectorAll('.poke-show');
