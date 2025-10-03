@@ -110,7 +110,7 @@ h2, h3 {
 .pokelayout > div.poke-preview img {
     width: 200px;
     height: auto;
-    display: block;
+    display: box;
     image-rendering: pixelated;
     padding-right: 65px;
     padding-left: 65px;
