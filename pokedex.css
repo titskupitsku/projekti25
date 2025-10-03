@@ -114,10 +114,10 @@ h2, h3 {
     }
 }
 /*pseudo-element start*/
-.poke-type, .pokebottom {
+.poke-name, .poke-type, .pokebottom, .poke-mark, .poke-measure {
     position: relative;
 }
-.poke-name::before, .poke-type::before, .pokebottom::before {
+.poke-name::before, .poke-type::before{
     content: "";
     position: absolute;
     top: 0;
@@ -244,7 +244,7 @@ h2, h3 {
 .pokelayout_INFO {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    grid-template-rows: 60px 40px 40px 55px 80px;
+    grid-template-rows: 60px 37px 37px 70px 80px;
     grid-template-areas:
         "info-header info-header info-header"
         "info-preview poke-plate poke-plate"
@@ -254,6 +254,7 @@ h2, h3 {
         "pokebottom pokebottom pokebottom";
     background: url("/pokedex-kuvat/vector.jpg");
     background-size: cover;
+    gap: 4px;
     width: 57%;
     height: 420px;
     margin: 100px auto;
@@ -273,7 +274,6 @@ h2, h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #b32424;
     background: linear-gradient(0deg, rgba(179, 36, 36, 1) 35%, rgba(247, 35, 35, 1) 50%, rgba(255, 0, 0, 1) 66%);
     font-weight: 900;
     font-size: 24px;
@@ -281,12 +281,12 @@ h2, h3 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 8px;
     border-bottom: 3px solid black;
     border-left: 3px solid black;
     border-right: 3px solid black;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    margin-top: 8px;
     text-decoration: none;
     box-shadow: 3px 10px 7px -7px rgb(189, 189, 189);
 }
@@ -315,35 +315,43 @@ h2, h3 {
 .pokelayout_INFO > div.poke-plate {
     grid-area: poke-plate;
     display: flex;
-    background-color: #fff;
+    background-color: rgb(225, 29, 29);
     align-items: center;
     text-align: center;
     font-weight: 900;
+    font-size: 20px;
     padding-left: 10px;
-    padding-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: -4px;
     color: white;
     text-shadow: 2px 2px black;
-    border: 3px solid rgb(20, 20, 20);
-    border-radius: 8px;
-    box-shadow: 7px 7px rgba(189, 189, 189, 0.447) inset;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
 }
 .pokelayout_INFO > div.poke-plate2 {
     grid-area: poke-plate2;
     display: flex;
-    background-color: green;
+    background-color: #fff;
     align-items: center;
     text-align: center;
     font-weight: 900;
-    padding-left: 10px;
-    padding-top: 5px;
+    font-size: 20px;
+    padding-left: 50px;
     margin-left: 10px;
-    color: white;
-    text-shadow: 2px 2px black;
-    border: 3px solid rgb(20, 20, 20);
-    border-radius: 8px;
-    box-shadow: 7px 7px rgba(189, 189, 189, 0.447) inset;
+    margin-right: 10px;
+    margin-top: 0px;
+    color: rgb(48, 48, 48);
+    text-shadow: 2px 2px rgb(189, 189, 189);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 7px 7px rgba(189, 189, 189, 0.447);
 }
 .poke-plate-img {
     display: flex;
@@ -351,17 +359,11 @@ h2, h3 {
     width: 38px;
     height: 38px;
     image-rendering: pixelated;
-    border-radius: 50%;
-    margin-right: 0px;
-    margin-left: 5px;
-    background: transparent;
-}
-.poke-plate-img-bg {
-    display: flex;
-    position: relative;
-    align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: -10px;
+    background: transparent;
 }
 .pokelayout_INFO > div.poke-element {
     grid-area: poke-element;
@@ -370,53 +372,53 @@ h2, h3 {
     align-items: center;
     text-align: center;
     image-rendering: pixelated;
-    border: 3px solid black;
-    border-radius: 6px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .pokelayout_INFO > div.poke-element img {
     width: auto;
     height: auto;
     display: block;
     position: relative;
+    background: transparent;
     image-rendering: pixelated;
+    margin-left: 6px;
 }
 .pokelayout_INFO > div.poke-mark {
     grid-area: poke-mark;
     display: block;
-    background-color: #fff;
-    font-weight: 900;
-    margin-left: 50px;
-    margin-right: 50px;
-    color: black;
-    text-shadow: 2px 2px rgb(189, 189, 189);
-    border: 3px solid rgb(20, 20, 20);
+    background: linear-gradient(0deg,rgba(255, 255, 255, 1) 80%, rgba(225, 29, 29, 1) 20%);
+    margin-top: 5px;
+    margin-left: 90px;
+    margin-right: 0px;
+    border: 2px solid rgb(20, 20, 20);
     border-radius: 8px;
+    box-shadow: 7px 7px rgba(189, 189, 189, 0.447);
 }
 .pokelayout_INFO > div.poke-mark img {
-    width: 30px;
+    width: 45px;
     height: auto;
     display: block;
     position: relative;
     image-rendering: pixelated;
-    align-items: center;
-    justify-content: center;
     padding-left: 10px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .pokelayout_INFO > div.poke-measure {
     grid-area: poke-measure;
     display: flex;
-    background-color: #fff;
+    background: linear-gradient(270deg,rgba(255, 255, 255, 1) 96%, rgba(225, 29, 29, 1) 4%);
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-weight: 900;
-    padding-top: 5px;
-    margin-right: 10px;
-    color: black;
+    font-size: 20px;
+    padding-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: rgb(48, 48, 48);
     text-shadow: 2px 2px rgb(189, 189, 189);
-    border: 3px solid rgb(20, 20, 20);
+    border: 2px solid rgb(20, 20, 20);
     border-radius: 8px;
+    box-shadow: 7px 7px rgba(189, 189, 189, 0.447);
 }
 .pokelayout_INFO > div.pokebottom {
     grid-area: pokebottom;
@@ -425,17 +427,23 @@ h2, h3 {
     align-items: left;
     text-align: left;
     font-weight: 900;
-    font-size: 18px;
-    background: #fff;
-    padding-left: 10px;
+    font-size: 24px;
+    background: linear-gradient(270deg,rgba(255, 255, 255, 1) 97%, rgba(225, 29, 29, 1) 3%);
+    padding-left: 30px;
     padding-top: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: rgb(48, 48, 48);
     text-shadow: 2px 2px rgb(189, 189, 189);
-    border: 3px solid rgb(20, 20, 20);
+    border: 3.5px solid rgb(20, 20, 20);
     border-radius: 8px;
+    box-shadow: 7px 7px rgba(189, 189, 189, 0.447);
 }
+
+
+
+
 
 /* pokepages data*/
 .pokelayout_DATA {
