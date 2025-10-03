@@ -3,7 +3,7 @@ const pokemonData = {
       name: "Bulbasaur",
       page: "pokemonsivut/0001bulbasaur.html",
       image: "pokedex-kuvat/pokemon_icon_001_00.png",
-      type: "Grass - Poison"
+      type: "Grass - Poison",
     },
     "0002": {
       name: "Ivysaur",
@@ -111,4 +111,3 @@ document.addEventListener('DOMContentLoaded', function () { //call function
   window.addEventListener('scroll', hidePortalBorder, true);
   window.addEventListener('resize', hidePortalBorder);
 });
-
