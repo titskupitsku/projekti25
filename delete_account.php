@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
 
         $_SESSION = [];
         session_destroy();
-        header("Location: Homepage.php");
+        header("Location: index.php");
         exit;
 
     } catch (PDOException $e) {
