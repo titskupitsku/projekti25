@@ -26,14 +26,14 @@ h2, h3 {
 }
 .pokelayout {
     display: grid;
-    grid-template-columns: 1fr 1fr 20px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 60px 50px 1fr 60px;
     grid-template-areas:
         "pokedex-header pokedex-header"
         "poke-name poke-right"
         "poke-preview poke-right"
         "poke-bottom poke-right";
-    background: url("/pokedex-kuvat/vector.jpg");
+    background: url("pokedex-kuvat/vector.jpg");
     border-radius: 35px;
     gap: 4px;
     width: 57%;
@@ -107,7 +107,6 @@ h2, h3 {
     padding-top: 10px;
     position: relative;
     animation: pokemon-bounce 0.15s infinite alternate linear;
-    
 }
 /*pokeanimaatio*/
 @keyframes pokemon-bounce {
@@ -238,7 +237,7 @@ h2, h3 {
         "info-preview poke-mark poke-element"
         "info-preview poke-measure poke-measure"
         "pokebottom pokebottom pokebottom";
-    background: url("/pokedex-kuvat/vector.jpg");
+    background: url("pokedex-kuvat/vector.jpg");
     background-size: cover;
     border-radius: 45px;
     gap: 4px;
