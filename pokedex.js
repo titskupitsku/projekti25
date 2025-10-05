@@ -1,75 +1,75 @@
 const pokemonData = {
-    "0001": {
+    "001": {
       name: "Bulbasaur",
       page: "pokemonsivut/0001bulbasaur.html",
       image: "pokedex-kuvat/pokemon_icon_001_00.png",
-      type: "Seen: 1010 <br> Owned: 1010",
+      type: "Seen: 452 <br> Owned: 309",
     },
-    "0002": {
+    "002": {
       name: "Ivysaur",
       page: "pokemonsivut/0002venusaur.html",
       image: "pokedex-kuvat/pokemon_icon_002_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 43 <br> Owned: 18"
     },
-    "0003": {
+    "003": {
       name: "Venusaur",
       page: "pokemonsivut/0003ivysaur.html",
       image: "pokedex-kuvat/pokemon_icon_003_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 15 <br> Owned: 4"
     },
-    "0004": {
+    "004": {
       name: "Charmander",
       page: "pokemonsivut/0004charmander.html",
       image: "pokedex-kuvat/pokemon_icon_004_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 82 <br> Owned: 67"
     },
-    "0005": {
+    "005": {
       name: "Charmeleon",
       page: "pokemonsivut/0005charmeleon.html",
       image: "pokedex-kuvat/pokemon_icon_005_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 62 <br> Owned: 16"
     },
-    "0006": {
+    "006": {
       name: "Charizard",
       page: "pokemonsivut/0006charizard.html",
       image: "pokedex-kuvat/pokemon_icon_006_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 7 <br> Owned: 3"
     },
-    "0007": {
+    "007": {
       name: "Squirtle",
       page: "pokemonsivut/0007squirtle.html",
       image: "pokedex-kuvat/pokemon_icon_007_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 142 <br> Owned: 89"
     },
-    "0008": {
+    "008": {
       name: "Wartortle",
       page: "pokemonsivut/0008wartortle.html",
       image: "pokedex-kuvat/pokemon_icon_008_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 41 <br> Owned: 6"
     },
-    "0009": {
+    "009": {
       name:"Blastoise",
       page: "pokemonsivut/0009blastoise.html",
       image: "pokedex-kuvat/pokemon_icon_009_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 1 <br> Owned: 0"
     },
-    "0010": {
+    "010": {
       name:"Caterpie",
       page: "pokemonsivut/0010caterpie.html",
       image: "pokedex-kuvat/pokemon_icon_010_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 77 <br> Owned: 25"
     },
-    "0011": {
+    "011": {
       name:"Metapod",
       page: "pokemonsivut/0011metapod.html",
       image: "pokedex-kuvat/pokemon_icon_011_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 70 <br> Owned: 43"
     },
-    "0012": {
+    "012": {
       name:"Butterfree",
       page: "pokemonsivut/0012butterfree.html",
       image: "pokedex-kuvat/pokemon_icon_012_00.png",
-      type: "Seen: 1010 <br> Owned: 1010"
+      type: "Seen: 3 <br> Owned: 2"
     },
   };
 const pokeItems = document.querySelectorAll('.poke-show');
@@ -78,7 +78,7 @@ const pokeItems = document.querySelectorAll('.poke-show');
       pokeItems.forEach(el => el.classList.remove('active'));
       item.classList.add('active');
 
-      const id = item.id || item.textContent.match(/#(\d{4})/)[1];
+      const id = item.id || item.textContent.match(/#(\d{3})/)[1];
       const data = pokemonData[id];
 
       document.getElementById('poke-name').innerHTML = `<p><a href="${data.page}"class="poke-link">${data.name}</a></p>`;
