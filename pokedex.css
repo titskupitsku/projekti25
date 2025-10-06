@@ -36,8 +36,8 @@ h2, h3 {
     background: url("pokedex-kuvat/vector.jpg");
     border-radius: 35px;
     gap: 4px;
-    width: 57%;
-    height: 420px;
+    width: 699px;
+    height: 429px;
     margin: 50px auto;
     padding-bottom: 10px;
     font-family: "Doto", sans-serif;
@@ -241,8 +241,8 @@ h2, h3 {
     background-size: cover;
     border-radius: 45px;
     gap: 4px;
-    width: 57%;
-    height: 420px;
+    width: 729px;
+    height: 429px;
     margin: 100px auto;
     padding-bottom: 10px;
     font-family: "Doto", sans-serif;
@@ -402,7 +402,7 @@ h2, h3 {
     font-weight: 900;
     font-size: 24px;
     padding-left: 15px;
-    padding-top: 10px;
+    padding-top: 6px;
     margin-right: 20px;
     margin-left: 105px;
     margin-bottom: 20px;
