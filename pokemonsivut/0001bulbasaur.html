@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../pokedex.css">
+    <link rel="icon" type="image/x-icon" href="/pokedex-kuvat/gen1_chars/pokemon_icon_001_00.png">
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link 
@@ -15,18 +16,33 @@
         referrerpolicy="no-referrer" />
     <script src="../script.js" defer></script>
     <script src="../pokedex.js" defer></script>
-    <title>Pokedex</title>
+    <title>Pokedex → Bulbasaur</title>
 </head>
 <body>
     <div class="pokelayout_INFO" id="pokeborderimg">
         <div class="info-header">
-            <nav>
                 <a href="../Pokedex.html">⤶ POKEDEX</a>
-                <a href="../pokemonsivut/pokemonsivut_data/0001bulbasaurData.html">DATA</a>
-            </nav>
+                <button class="tablink" onclick="openPage('')" id="defaultOpen"></button>
+                <button class="tablink" onclick="openPage('Data')">DATA</button>
+                <button class="tablink" onclick="openPage('Prev')">PREV</button>
+                <button class="tablink" onclick="openPage('Next')">NEXT</button>
+<div id="Bulba" class="tabcontent">
+  <h3>CurrentPoke</h3>
+</div>
+
+<div id="Data" class="tabcontent">
+  <h3>Data</h3>
+</div>
+
+<div id="Prev" class="tabcontent">
+  <h3>Prev</h3>
+</div> 
+<div id="Next" class="tabcontent">
+  <h3>Next</h3>
+</div> 
         </div>
         <div class="info-preview" id="info-preview">
-            <img src="../pokedex-kuvat/pokemon_icon_001_00.png" alt="Bulbasaur">
+            <img src="../pokedex-kuvat/gen1_chars/pokemon_icon_001_00.png" alt="Bulbasaur">
         </div>
         <div class="poke-plate" id ="poke-plate">
             <span class="poke-plate-img-bg"><img src="../pokedex-kuvat/pokeballo.png" class="poke-plate-img" alt="Pokeball"/>
@@ -41,13 +57,13 @@
             <img src="../pokedex-kuvat/poison.png">
         </div>
         <div class="poke-mark" id="poke-mark">
-            <img src="../pokedex-kuvat/F0001.png" alt="Bulbasaur Footprint">
+            <img src="../pokedex-kuvat/gen1_fp/F0001.png" alt="Bulbasaur Footprint">
         </div>
         <div class="poke-measure" id="poke-measure">&nbsp;Height: &nbsp; 0.7m
             <hr style="border: none; border-bottom: 3px dotted rgb(189, 189, 189); margin:0; padding-top: 2px";> &nbsp;Weight: &nbsp; 6.9kg
         </div>
         <div class="pokebottom" id="pokebottom">
-        A strange seed was planted on its back at birth. The plant sprouts and grows with this POKÈMON. 
+        BULBASAUR can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger. 
         </div>
     </div>
     
